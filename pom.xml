@@ -19,7 +19,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ubl-bsf</groupId>
 	<artifactId>ubl-bsf</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>ubl-bsf parser</name>
 	<description>
 		Transformador xml de formato "FacturaPlus" (estandar de oasis
