@@ -1,0 +1,2534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<!-- Simple types -->
+	<xs:simpleType name="ZipCode">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+			<xs:minLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="CenterNumberSimple">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="5"/>
+			<xs:pattern value="\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CenterNumber">
+		<xs:simpleContent>
+
+			<xs:extension base="CenterNumberSimple">
+				<xs:attribute name="idref" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="CIF">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="18"/>
+			<xs:pattern value="([A-Z0-9])*"/>
+
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EAN13">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="13"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NumeroCentro">
+		<xs:restriction base="xs:string">
+
+			<xs:maxLength value="4"/>
+			<xs:pattern value="\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NombreCentro">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="typeEmail">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NOTIFICACION"/>
+			<xs:enumeration value="FACTURA"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SerieFactura">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="6"/>
+
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Currency">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ADP"/>
+			<xs:enumeration value="AED"/>
+			<xs:enumeration value="AFA"/>
+			<xs:enumeration value="ALL"/>
+			<xs:enumeration value="AMD"/>
+
+			<xs:enumeration value="ANG"/>
+			<xs:enumeration value="AOK"/>
+			<xs:enumeration value="ARA"/>
+			<xs:enumeration value="ARS"/>
+			<xs:enumeration value="ATS"/>
+			<xs:enumeration value="AUD"/>
+			<xs:enumeration value="AWG"/>
+			<xs:enumeration value="AZM"/>
+			<xs:enumeration value="BAD"/>
+
+			<xs:enumeration value="BBD"/>
+			<xs:enumeration value="BDT"/>
+			<xs:enumeration value="BEF"/>
+			<xs:enumeration value="BGL"/>
+			<xs:enumeration value="BHD"/>
+			<xs:enumeration value="BIF"/>
+			<xs:enumeration value="BMD"/>
+			<xs:enumeration value="BND"/>
+			<xs:enumeration value="BOB"/>
+
+			<xs:enumeration value="BRL"/>
+			<xs:enumeration value="BRR"/>
+			<xs:enumeration value="BSD"/>
+			<xs:enumeration value="BWP"/>
+			<xs:enumeration value="BYR"/>
+			<xs:enumeration value="BZD"/>
+			<xs:enumeration value="CAD"/>
+			<xs:enumeration value="CDP"/>
+			<xs:enumeration value="CHF"/>
+
+			<xs:enumeration value="CLP"/>
+			<xs:enumeration value="CNY"/>
+			<xs:enumeration value="COP"/>
+			<xs:enumeration value="CRC"/>
+			<xs:enumeration value="CUP"/>
+			<xs:enumeration value="CVE"/>
+			<xs:enumeration value="CYP"/>
+			<xs:enumeration value="CZK"/>
+			<xs:enumeration value="DEM"/>
+
+			<xs:enumeration value="DJF"/>
+			<xs:enumeration value="DKK"/>
+			<xs:enumeration value="DOP"/>
+			<xs:enumeration value="DRP"/>
+			<xs:enumeration value="DZD"/>
+			<xs:enumeration value="ECS"/>
+			<xs:enumeration value="ECU"/>
+			<xs:enumeration value="EEK"/>
+			<xs:enumeration value="EGP"/>
+
+			<xs:enumeration value="ESP"/>
+			<xs:enumeration value="ETB"/>
+			<xs:enumeration value="EUR"/>
+			<xs:enumeration value="FIM"/>
+			<xs:enumeration value="FJD"/>
+			<xs:enumeration value="FKP"/>
+			<xs:enumeration value="FRF"/>
+			<xs:enumeration value="GBP"/>
+			<xs:enumeration value="GEK"/>
+
+			<xs:enumeration value="GHC"/>
+			<xs:enumeration value="GIP"/>
+			<xs:enumeration value="GMD"/>
+			<xs:enumeration value="GNF"/>
+			<xs:enumeration value="GRD"/>
+			<xs:enumeration value="GTQ"/>
+			<xs:enumeration value="GWP"/>
+			<xs:enumeration value="GYD"/>
+			<xs:enumeration value="HKD"/>
+
+			<xs:enumeration value="HNL"/>
+			<xs:enumeration value="HRD"/>
+			<xs:enumeration value="HTG"/>
+			<xs:enumeration value="HUF"/>
+			<xs:enumeration value="IDR"/>
+			<xs:enumeration value="IEP"/>
+			<xs:enumeration value="ILS"/>
+			<xs:enumeration value="INR"/>
+			<xs:enumeration value="IQD"/>
+
+			<xs:enumeration value="IRR"/>
+			<xs:enumeration value="ISK"/>
+			<xs:enumeration value="ITL"/>
+			<xs:enumeration value="JMD"/>
+			<xs:enumeration value="JOD"/>
+			<xs:enumeration value="JPY"/>
+			<xs:enumeration value="KES"/>
+			<xs:enumeration value="KHR"/>
+			<xs:enumeration value="KIS"/>
+
+			<xs:enumeration value="KMF"/>
+			<xs:enumeration value="KPW"/>
+			<xs:enumeration value="KRW"/>
+			<xs:enumeration value="KWD"/>
+			<xs:enumeration value="KYD"/>
+			<xs:enumeration value="KZT"/>
+			<xs:enumeration value="LAK"/>
+			<xs:enumeration value="LBP"/>
+			<xs:enumeration value="LKR"/>
+
+			<xs:enumeration value="LRD"/>
+			<xs:enumeration value="LSL"/>
+			<xs:enumeration value="LTL"/>
+			<xs:enumeration value="LUF"/>
+			<xs:enumeration value="LVL"/>
+			<xs:enumeration value="LYD"/>
+			<xs:enumeration value="MAD"/>
+			<xs:enumeration value="MDL"/>
+			<xs:enumeration value="MGF"/>
+
+			<xs:enumeration value="MNC"/>
+			<xs:enumeration value="MNT"/>
+			<xs:enumeration value="MOP"/>
+			<xs:enumeration value="MRO"/>
+			<xs:enumeration value="MTL"/>
+			<xs:enumeration value="MUR"/>
+			<xs:enumeration value="MVR"/>
+			<xs:enumeration value="MWK"/>
+			<xs:enumeration value="MXN"/>
+
+			<xs:enumeration value="MXP"/>
+			<xs:enumeration value="MYR"/>
+			<xs:enumeration value="MZM"/>
+			<xs:enumeration value="NGN"/>
+			<xs:enumeration value="NIC"/>
+			<xs:enumeration value="NIO"/>
+			<xs:enumeration value="NIS"/>
+			<xs:enumeration value="NLG"/>
+			<xs:enumeration value="NOK"/>
+
+			<xs:enumeration value="NPR"/>
+			<xs:enumeration value="NZD"/>
+			<xs:enumeration value="OMR"/>
+			<xs:enumeration value="PAB"/>
+			<xs:enumeration value="PEI"/>
+			<xs:enumeration value="PEN"/>
+			<xs:enumeration value="PES"/>
+			<xs:enumeration value="PGK"/>
+			<xs:enumeration value="PHP"/>
+
+			<xs:enumeration value="PKR"/>
+			<xs:enumeration value="PLN"/>
+			<xs:enumeration value="PLZ"/>
+			<xs:enumeration value="PTE"/>
+			<xs:enumeration value="PYG"/>
+			<xs:enumeration value="QAR"/>
+			<xs:enumeration value="RMB"/>
+			<xs:enumeration value="ROL"/>
+			<xs:enumeration value="RUR"/>
+
+			<xs:enumeration value="RWF"/>
+			<xs:enumeration value="SAR"/>
+			<xs:enumeration value="SBD"/>
+			<xs:enumeration value="SCR"/>
+			<xs:enumeration value="SDP"/>
+			<xs:enumeration value="SEK"/>
+			<xs:enumeration value="SGD"/>
+			<xs:enumeration value="SHP"/>
+			<xs:enumeration value="SIT"/>
+
+			<xs:enumeration value="SKK"/>
+			<xs:enumeration value="SLL"/>
+			<xs:enumeration value="SOL"/>
+			<xs:enumeration value="SOS"/>
+			<xs:enumeration value="SRG"/>
+			<xs:enumeration value="STD"/>
+			<xs:enumeration value="SUR"/>
+			<xs:enumeration value="SVC"/>
+			<xs:enumeration value="SYP"/>
+
+			<xs:enumeration value="SZL"/>
+			<xs:enumeration value="THB"/>
+			<xs:enumeration value="TJR"/>
+			<xs:enumeration value="TMM"/>
+			<xs:enumeration value="TND"/>
+			<xs:enumeration value="TOP"/>
+			<xs:enumeration value="TPE"/>
+			<xs:enumeration value="TRL"/>
+			<xs:enumeration value="TTD"/>
+
+			<xs:enumeration value="TWD"/>
+			<xs:enumeration value="TZS"/>
+			<xs:enumeration value="UAK"/>
+			<xs:enumeration value="UGS"/>
+			<xs:enumeration value="USD"/>
+			<xs:enumeration value="UYP"/>
+			<xs:enumeration value="UYU"/>
+			<xs:enumeration value="VEB"/>
+			<xs:enumeration value="VND"/>
+
+			<xs:enumeration value="VUV"/>
+			<xs:enumeration value="WST"/>
+			<xs:enumeration value="XAF"/>
+			<xs:enumeration value="XCD"/>
+			<xs:enumeration value="XOF"/>
+			<xs:enumeration value="YER"/>
+			<xs:enumeration value="ZAR"/>
+			<xs:enumeration value="ZMK"/>
+			<xs:enumeration value="ZRZ"/>
+
+			<xs:enumeration value="ZWD"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Country">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="3"/>
+			<xs:enumeration value="AF"/>
+			<xs:enumeration value="AL"/>
+
+			<xs:enumeration value="DZ"/>
+			<xs:enumeration value="AS"/>
+			<xs:enumeration value="AD"/>
+			<xs:enumeration value="AO"/>
+			<xs:enumeration value="AI"/>
+			<xs:enumeration value="AQ"/>
+			<xs:enumeration value="AG"/>
+			<xs:enumeration value="AR"/>
+			<xs:enumeration value="AM"/>
+
+			<xs:enumeration value="AW"/>
+			<xs:enumeration value="AU"/>
+			<xs:enumeration value="AT"/>
+			<xs:enumeration value="AZ"/>
+			<xs:enumeration value="BS"/>
+			<xs:enumeration value="BH"/>
+			<xs:enumeration value="BD"/>
+			<xs:enumeration value="BB"/>
+			<xs:enumeration value="BY"/>
+
+			<xs:enumeration value="BE"/>
+			<xs:enumeration value="BZ"/>
+			<xs:enumeration value="BJ"/>
+			<xs:enumeration value="BM"/>
+			<xs:enumeration value="BT"/>
+			<xs:enumeration value="BO"/>
+			<xs:enumeration value="BA"/>
+			<xs:enumeration value="BW"/>
+			<xs:enumeration value="BV"/>
+
+			<xs:enumeration value="BR"/>
+			<xs:enumeration value="IO"/>
+			<xs:enumeration value="BN"/>
+			<xs:enumeration value="BG"/>
+			<xs:enumeration value="BF"/>
+			<xs:enumeration value="BI"/>
+			<xs:enumeration value="KH"/>
+			<xs:enumeration value="CM"/>
+			<xs:enumeration value="CA"/>
+
+			<xs:enumeration value="CV"/>
+			<xs:enumeration value="KY"/>
+			<xs:enumeration value="CF"/>
+			<xs:enumeration value="TD"/>
+			<xs:enumeration value="CL"/>
+			<xs:enumeration value="CN"/>
+			<xs:enumeration value="CX"/>
+			<xs:enumeration value="CC"/>
+			<xs:enumeration value="CO"/>
+
+			<xs:enumeration value="KM"/>
+			<xs:enumeration value="CG"/>
+			<xs:enumeration value="CK"/>
+			<xs:enumeration value="CR"/>
+			<xs:enumeration value="CI"/>
+			<xs:enumeration value="HR"/>
+			<xs:enumeration value="CU"/>
+			<xs:enumeration value="CY"/>
+			<xs:enumeration value="CZ"/>
+
+			<xs:enumeration value="DK"/>
+			<xs:enumeration value="DJ"/>
+			<xs:enumeration value="DM"/>
+			<xs:enumeration value="DO"/>
+			<xs:enumeration value="TP"/>
+			<xs:enumeration value="EC"/>
+			<xs:enumeration value="EG"/>
+			<xs:enumeration value="SV"/>
+			<xs:enumeration value="GQ"/>
+
+			<xs:enumeration value="ER"/>
+			<xs:enumeration value="EE"/>
+			<xs:enumeration value="ET"/>
+			<xs:enumeration value="FK"/>
+			<xs:enumeration value="FO"/>
+			<xs:enumeration value="FJ"/>
+			<xs:enumeration value="FI"/>
+			<xs:enumeration value="FR"/>
+			<xs:enumeration value="FX"/>
+
+			<xs:enumeration value="GF"/>
+			<xs:enumeration value="PF"/>
+			<xs:enumeration value="TF"/>
+			<xs:enumeration value="GA"/>
+			<xs:enumeration value="GM"/>
+			<xs:enumeration value="GE"/>
+			<xs:enumeration value="DE"/>
+			<xs:enumeration value="GH"/>
+			<xs:enumeration value="GI"/>
+
+			<xs:enumeration value="GR"/>
+			<xs:enumeration value="GL"/>
+			<xs:enumeration value="GD"/>
+			<xs:enumeration value="GP"/>
+			<xs:enumeration value="GU"/>
+			<xs:enumeration value="GT"/>
+			<xs:enumeration value="GN"/>
+			<xs:enumeration value="GW"/>
+			<xs:enumeration value="GY"/>
+
+			<xs:enumeration value="HT"/>
+			<xs:enumeration value="HM"/>
+			<xs:enumeration value="HN"/>
+			<xs:enumeration value="HK"/>
+			<xs:enumeration value="HU"/>
+			<xs:enumeration value="IS"/>
+			<xs:enumeration value="IN"/>
+			<xs:enumeration value="ID"/>
+			<xs:enumeration value="IR"/>
+
+			<xs:enumeration value="IQ"/>
+			<xs:enumeration value="IE"/>
+			<xs:enumeration value="IL"/>
+			<xs:enumeration value="IT"/>
+			<xs:enumeration value="JM"/>
+			<xs:enumeration value="JP"/>
+			<xs:enumeration value="JO"/>
+			<xs:enumeration value="KZ"/>
+			<xs:enumeration value="KE"/>
+
+			<xs:enumeration value="KI"/>
+			<xs:enumeration value="KP"/>
+			<xs:enumeration value="KR"/>
+			<xs:enumeration value="KW"/>
+			<xs:enumeration value="KG"/>
+			<xs:enumeration value="LA"/>
+			<xs:enumeration value="LV"/>
+			<xs:enumeration value="LB"/>
+			<xs:enumeration value="LS"/>
+
+			<xs:enumeration value="LR"/>
+			<xs:enumeration value="LY"/>
+			<xs:enumeration value="LI"/>
+			<xs:enumeration value="LT"/>
+			<xs:enumeration value="LU"/>
+			<xs:enumeration value="MO"/>
+			<xs:enumeration value="MK"/>
+			<xs:enumeration value="MG"/>
+			<xs:enumeration value="MW"/>
+
+			<xs:enumeration value="MY"/>
+			<xs:enumeration value="MV"/>
+			<xs:enumeration value="ML"/>
+			<xs:enumeration value="MT"/>
+			<xs:enumeration value="MH"/>
+			<xs:enumeration value="MQ"/>
+			<xs:enumeration value="MR"/>
+			<xs:enumeration value="MU"/>
+			<xs:enumeration value="YT"/>
+
+			<xs:enumeration value="MX"/>
+			<xs:enumeration value="FM"/>
+			<xs:enumeration value="MD"/>
+			<xs:enumeration value="MC"/>
+			<xs:enumeration value="MN"/>
+			<xs:enumeration value="MS"/>
+			<xs:enumeration value="MA"/>
+			<xs:enumeration value="MZ"/>
+			<xs:enumeration value="MM"/>
+
+			<xs:enumeration value="NA"/>
+			<xs:enumeration value="NR"/>
+			<xs:enumeration value="NP"/>
+			<xs:enumeration value="NL"/>
+			<xs:enumeration value="AN"/>
+			<xs:enumeration value="NC"/>
+			<xs:enumeration value="NZ"/>
+			<xs:enumeration value="NI"/>
+			<xs:enumeration value="NE"/>
+
+			<xs:enumeration value="NG"/>
+			<xs:enumeration value="NU"/>
+			<xs:enumeration value="NF"/>
+			<xs:enumeration value="MP"/>
+			<xs:enumeration value="NO"/>
+			<xs:enumeration value="OM"/>
+			<xs:enumeration value="PK"/>
+			<xs:enumeration value="PW"/>
+			<xs:enumeration value="PA"/>
+
+			<xs:enumeration value="PG"/>
+			<xs:enumeration value="PY"/>
+			<xs:enumeration value="PE"/>
+			<xs:enumeration value="PH"/>
+			<xs:enumeration value="PN"/>
+			<xs:enumeration value="PL"/>
+			<xs:enumeration value="PT"/>
+			<xs:enumeration value="PR"/>
+			<xs:enumeration value="QA"/>
+
+			<xs:enumeration value="RE"/>
+			<xs:enumeration value="RO"/>
+			<xs:enumeration value="RU"/>
+			<xs:enumeration value="RW"/>
+			<xs:enumeration value="KN"/>
+			<xs:enumeration value="LC"/>
+			<xs:enumeration value="VC"/>
+			<xs:enumeration value="WS"/>
+			<xs:enumeration value="SM"/>
+
+			<xs:enumeration value="ST"/>
+			<xs:enumeration value="SA"/>
+			<xs:enumeration value="SN"/>
+			<xs:enumeration value="CS"/>
+			<xs:enumeration value="SC"/>
+			<xs:enumeration value="SL"/>
+			<xs:enumeration value="SG"/>
+			<xs:enumeration value="SK"/>
+			<xs:enumeration value="SI"/>
+
+			<xs:enumeration value="SB"/>
+			<xs:enumeration value="SO"/>
+			<xs:enumeration value="ZA"/>
+			<xs:enumeration value="GS"/>
+			<xs:enumeration value="ES"/>
+			<xs:enumeration value="LK"/>
+			<xs:enumeration value="SH"/>
+			<xs:enumeration value="PM"/>
+			<xs:enumeration value="SD"/>
+
+			<xs:enumeration value="SR"/>
+			<xs:enumeration value="SJ"/>
+			<xs:enumeration value="SZ"/>
+			<xs:enumeration value="SE"/>
+			<xs:enumeration value="CH"/>
+			<xs:enumeration value="SY"/>
+			<xs:enumeration value="TW"/>
+			<xs:enumeration value="TJ"/>
+			<xs:enumeration value="TZ"/>
+
+			<xs:enumeration value="TH"/>
+			<xs:enumeration value="TG"/>
+			<xs:enumeration value="TK"/>
+			<xs:enumeration value="TO"/>
+			<xs:enumeration value="TT"/>
+			<xs:enumeration value="TN"/>
+			<xs:enumeration value="TR"/>
+			<xs:enumeration value="TM"/>
+			<xs:enumeration value="TC"/>
+
+			<xs:enumeration value="TV"/>
+			<xs:enumeration value="UG"/>
+			<xs:enumeration value="UA"/>
+			<xs:enumeration value="AE"/>
+			<xs:enumeration value="GB"/>
+			<xs:enumeration value="US"/>
+			<xs:enumeration value="UM"/>
+			<xs:enumeration value="UY"/>
+			<xs:enumeration value="UZ"/>
+
+			<xs:enumeration value="VU"/>
+			<xs:enumeration value="VA"/>
+			<xs:enumeration value="VE"/>
+			<xs:enumeration value="VN"/>
+			<xs:enumeration value="VG"/>
+			<xs:enumeration value="VI"/>
+			<xs:enumeration value="WF"/>
+			<xs:enumeration value="EH"/>
+			<xs:enumeration value="YE"/>
+
+			<xs:enumeration value="ZR"/>
+			<xs:enumeration value="ZM"/>
+			<xs:enumeration value="ZW"/>
+			<xs:enumeration value="AFG"/>
+			<xs:enumeration value="ALB"/>
+			<xs:enumeration value="DZA"/>
+			<xs:enumeration value="ASM"/>
+			<xs:enumeration value="AND"/>
+			<xs:enumeration value="AGO"/>
+
+			<xs:enumeration value="AIA"/>
+			<xs:enumeration value="ATA"/>
+			<xs:enumeration value="ATG"/>
+			<xs:enumeration value="ARG"/>
+			<xs:enumeration value="ARM"/>
+			<xs:enumeration value="ABW"/>
+			<xs:enumeration value="AUS"/>
+			<xs:enumeration value="AUT"/>
+			<xs:enumeration value="AZE"/>
+
+			<xs:enumeration value="BHS"/>
+			<xs:enumeration value="BHR"/>
+			<xs:enumeration value="BGD"/>
+			<xs:enumeration value="BRB"/>
+			<xs:enumeration value="BLR"/>
+			<xs:enumeration value="BEL"/>
+			<xs:enumeration value="BLZ"/>
+			<xs:enumeration value="BEN"/>
+			<xs:enumeration value="BMU"/>
+
+			<xs:enumeration value="BTN"/>
+			<xs:enumeration value="BOL"/>
+			<xs:enumeration value="BIH"/>
+			<xs:enumeration value="BWA"/>
+			<xs:enumeration value="BVT"/>
+			<xs:enumeration value="BRA"/>
+			<xs:enumeration value="IOT"/>
+			<xs:enumeration value="BRN"/>
+			<xs:enumeration value="BGR"/>
+
+			<xs:enumeration value="BFA"/>
+			<xs:enumeration value="BDI"/>
+			<xs:enumeration value="KHM"/>
+			<xs:enumeration value="CMR"/>
+			<xs:enumeration value="CAN"/>
+			<xs:enumeration value="CPV"/>
+			<xs:enumeration value="CYM"/>
+			<xs:enumeration value="CAF"/>
+			<xs:enumeration value="TCD"/>
+
+			<xs:enumeration value="CHL"/>
+			<xs:enumeration value="CHN"/>
+			<xs:enumeration value="CXR"/>
+			<xs:enumeration value="CCK"/>
+			<xs:enumeration value="COL"/>
+			<xs:enumeration value="COM"/>
+			<xs:enumeration value="COG"/>
+			<xs:enumeration value="COK"/>
+			<xs:enumeration value="CRI"/>
+
+			<xs:enumeration value="CIV"/>
+			<xs:enumeration value="HRV"/>
+			<xs:enumeration value="CUB"/>
+			<xs:enumeration value="CYP"/>
+			<xs:enumeration value="CZE"/>
+			<xs:enumeration value="DNK"/>
+			<xs:enumeration value="DJI"/>
+			<xs:enumeration value="DMA"/>
+			<xs:enumeration value="DOM"/>
+
+			<xs:enumeration value="TMP"/>
+			<xs:enumeration value="ECU"/>
+			<xs:enumeration value="EGY"/>
+			<xs:enumeration value="SLV"/>
+			<xs:enumeration value="GNQ"/>
+			<xs:enumeration value="ERI"/>
+			<xs:enumeration value="EST"/>
+			<xs:enumeration value="ETH"/>
+			<xs:enumeration value="FLK"/>
+
+			<xs:enumeration value="FRO"/>
+			<xs:enumeration value="FJI"/>
+			<xs:enumeration value="FIN"/>
+			<xs:enumeration value="FRA"/>
+			<xs:enumeration value="FXX"/>
+			<xs:enumeration value="GUF"/>
+			<xs:enumeration value="PYF"/>
+			<xs:enumeration value="ATF"/>
+			<xs:enumeration value="GAB"/>
+
+			<xs:enumeration value="GMB"/>
+			<xs:enumeration value="GEO"/>
+			<xs:enumeration value="DEU"/>
+			<xs:enumeration value="GHA"/>
+			<xs:enumeration value="GIB"/>
+			<xs:enumeration value="GRC"/>
+			<xs:enumeration value="GRL"/>
+			<xs:enumeration value="GRD"/>
+			<xs:enumeration value="GLP"/>
+
+			<xs:enumeration value="GUM"/>
+			<xs:enumeration value="GTM"/>
+			<xs:enumeration value="GIN"/>
+			<xs:enumeration value="GNB"/>
+			<xs:enumeration value="GUY"/>
+			<xs:enumeration value="HTI"/>
+			<xs:enumeration value="HMD"/>
+			<xs:enumeration value="HND"/>
+			<xs:enumeration value="HKG"/>
+
+			<xs:enumeration value="HUN"/>
+			<xs:enumeration value="ISL"/>
+			<xs:enumeration value="IND"/>
+			<xs:enumeration value="IDN"/>
+			<xs:enumeration value="IRN"/>
+			<xs:enumeration value="IRQ"/>
+			<xs:enumeration value="IRL"/>
+			<xs:enumeration value="ISR"/>
+			<xs:enumeration value="ITA"/>
+
+			<xs:enumeration value="JAM"/>
+			<xs:enumeration value="JPN"/>
+			<xs:enumeration value="JOR"/>
+			<xs:enumeration value="KAZ"/>
+			<xs:enumeration value="KEN"/>
+			<xs:enumeration value="KIR"/>
+			<xs:enumeration value="PRK"/>
+			<xs:enumeration value="KOR"/>
+			<xs:enumeration value="KWT"/>
+
+			<xs:enumeration value="KGZ"/>
+			<xs:enumeration value="LAO"/>
+			<xs:enumeration value="LVA"/>
+			<xs:enumeration value="LBN"/>
+			<xs:enumeration value="LSO"/>
+			<xs:enumeration value="LBR"/>
+			<xs:enumeration value="LBY"/>
+			<xs:enumeration value="LIE"/>
+			<xs:enumeration value="LTU"/>
+
+			<xs:enumeration value="LUX"/>
+			<xs:enumeration value="MAC"/>
+			<xs:enumeration value="MKD"/>
+			<xs:enumeration value="MDG"/>
+			<xs:enumeration value="MWI"/>
+			<xs:enumeration value="MYS"/>
+			<xs:enumeration value="MDV"/>
+			<xs:enumeration value="MLI"/>
+			<xs:enumeration value="MLT"/>
+
+			<xs:enumeration value="MHL"/>
+			<xs:enumeration value="MTQ"/>
+			<xs:enumeration value="MRT"/>
+			<xs:enumeration value="MUS"/>
+			<xs:enumeration value="MYT"/>
+			<xs:enumeration value="MEX"/>
+			<xs:enumeration value="FSM"/>
+			<xs:enumeration value="MDA"/>
+			<xs:enumeration value="MCO"/>
+
+			<xs:enumeration value="MNG"/>
+			<xs:enumeration value="MSR"/>
+			<xs:enumeration value="MAR"/>
+			<xs:enumeration value="MOZ"/>
+			<xs:enumeration value="MMR"/>
+			<xs:enumeration value="NAM"/>
+			<xs:enumeration value="NRU"/>
+			<xs:enumeration value="NPL"/>
+			<xs:enumeration value="NLD"/>
+
+			<xs:enumeration value="ANT"/>
+			<xs:enumeration value="NCL"/>
+			<xs:enumeration value="NZL"/>
+			<xs:enumeration value="NIC"/>
+			<xs:enumeration value="NER"/>
+			<xs:enumeration value="NGA"/>
+			<xs:enumeration value="NIU"/>
+			<xs:enumeration value="NFK"/>
+			<xs:enumeration value="MNP"/>
+
+			<xs:enumeration value="NOR"/>
+			<xs:enumeration value="OMN"/>
+			<xs:enumeration value="PAK"/>
+			<xs:enumeration value="PLW"/>
+			<xs:enumeration value="PAN"/>
+			<xs:enumeration value="PNG"/>
+			<xs:enumeration value="PRY"/>
+			<xs:enumeration value="PER"/>
+			<xs:enumeration value="PHL"/>
+
+			<xs:enumeration value="PCN"/>
+			<xs:enumeration value="POL"/>
+			<xs:enumeration value="PRT"/>
+			<xs:enumeration value="PRI"/>
+			<xs:enumeration value="QAT"/>
+			<xs:enumeration value="REU"/>
+			<xs:enumeration value="ROM"/>
+			<xs:enumeration value="RUS"/>
+			<xs:enumeration value="RWA"/>
+
+			<xs:enumeration value="KNA"/>
+			<xs:enumeration value="LCA"/>
+			<xs:enumeration value="VCT"/>
+			<xs:enumeration value="WSM"/>
+			<xs:enumeration value="SMR"/>
+			<xs:enumeration value="STP"/>
+			<xs:enumeration value="SAU"/>
+			<xs:enumeration value="SEN"/>
+			<xs:enumeration value="SCG"/>
+
+			<xs:enumeration value="SYC"/>
+			<xs:enumeration value="SLE"/>
+			<xs:enumeration value="SGP"/>
+			<xs:enumeration value="SVK"/>
+			<xs:enumeration value="SVN"/>
+			<xs:enumeration value="SLB"/>
+			<xs:enumeration value="SOM"/>
+			<xs:enumeration value="ZAF"/>
+			<xs:enumeration value="SGS"/>
+
+			<xs:enumeration value="ESP"/>
+			<xs:enumeration value="LKA"/>
+			<xs:enumeration value="SHN"/>
+			<xs:enumeration value="SPM"/>
+			<xs:enumeration value="SDN"/>
+			<xs:enumeration value="SUR"/>
+			<xs:enumeration value="SJM"/>
+			<xs:enumeration value="SWZ"/>
+			<xs:enumeration value="SWE"/>
+
+			<xs:enumeration value="CHE"/>
+			<xs:enumeration value="SYR"/>
+			<xs:enumeration value="TWN"/>
+			<xs:enumeration value="TJK"/>
+			<xs:enumeration value="TZA"/>
+			<xs:enumeration value="THA"/>
+			<xs:enumeration value="TGO"/>
+			<xs:enumeration value="TKL"/>
+			<xs:enumeration value="TON"/>
+
+			<xs:enumeration value="TTO"/>
+			<xs:enumeration value="TUN"/>
+			<xs:enumeration value="TUR"/>
+			<xs:enumeration value="TKM"/>
+			<xs:enumeration value="TCA"/>
+			<xs:enumeration value="TUV"/>
+			<xs:enumeration value="UGA"/>
+			<xs:enumeration value="UKR"/>
+			<xs:enumeration value="ARE"/>
+
+			<xs:enumeration value="GBR"/>
+			<xs:enumeration value="USA"/>
+			<xs:enumeration value="UMI"/>
+			<xs:enumeration value="URY"/>
+			<xs:enumeration value="UZB"/>
+			<xs:enumeration value="VUT"/>
+			<xs:enumeration value="VAT"/>
+			<xs:enumeration value="VEN"/>
+			<xs:enumeration value="VNM"/>
+
+			<xs:enumeration value="VGB"/>
+			<xs:enumeration value="VIR"/>
+			<xs:enumeration value="WLF"/>
+			<xs:enumeration value="ESH"/>
+			<xs:enumeration value="YEM"/>
+			<xs:enumeration value="ZAR"/>
+			<xs:enumeration value="ZMB"/>
+			<xs:enumeration value="ZWE"/>
+		</xs:restriction>
+
+	</xs:simpleType>
+	<xs:simpleType name="DocType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FacturaComercial"/>
+			<xs:enumeration value="NotaAbono"/>
+			<xs:enumeration value="NotaSuplido"/>
+			<xs:enumeration value="NotaCargo"/>
+			<xs:enumeration value="Autofactura"/>
+			<xs:enumeration value="Albaran"/>
+
+			<xs:enumeration value="Contrato"/>
+			<xs:enumeration value="AutofacturaFirmaReceptor"/>
+			<xs:enumeration value="AttachmentGenerico"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InvoiceNumber">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="20"/>
+
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PhoneNumber">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="5"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LineFreeText">
+
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InvoiceFreeText">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="700"/>
+
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="URL">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EmailAddress">
+
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Percent">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2"/>
+			<xs:minInclusive value="0"/>
+
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PartyNumber">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Complex Types -->
+	<!-- Simple Attributes -->
+	<xs:attribute name="referencia">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="30"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+	<xs:attribute name="IdRemesa">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="0"/>
+				<xs:maxInclusive value="18"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="CIF" type="CIF"/>
+
+	<xs:attribute name="type" type="typeEmail"/>
+	<xs:attribute name="Nfactura" type="InvoiceNumber"/>
+	<xs:attribute name="IdTipoMoneda" type="Currency"/>
+	<xs:attribute name="Plantilla">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer"/>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="source">
+
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="WEBAPP2.0"/>
+				<xs:enumeration value="SAP"/>
+				<xs:enumeration value="EDI"/>
+				<xs:enumeration value="XML"/>
+				<xs:enumeration value="GFPrinter"/>
+				<xs:enumeration value="Autofactura"/>
+				<xs:enumeration value="DataEntry"/>
+
+				<xs:enumeration value="XPrinter"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="compression">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="ZIP"/>
+				<xs:enumeration value="GZIP"/>
+
+				<xs:enumeration value="NONE"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="format">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="xml"/>
+				<xs:enumeration value="doc"/>
+
+				<xs:enumeration value="gif"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="encoding">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="BASE64"/>
+				<xs:enumeration value="BER"/>
+
+				<xs:enumeration value="DER"/>
+				<xs:enumeration value="NONE"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<!-- Simple Elements -->
+	<xs:element name="PaisRecepcion">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+
+				<xs:minLength value="1"/>
+				<xs:maxLength value="30"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="GLN" type="EAN13"/>
+	<xs:element name="BasePrecio">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+
+				<xs:minInclusive value="-20"/>
+				<xs:maxInclusive value="20"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CIFEmisor" type="CIF"/>
+	<xs:element name="CIFReceptor" type="CIF"/>
+	<xs:element name="CNAE">
+		<xs:simpleType>
+
+			<xs:restriction base="xs:string">
+				<xs:pattern value="\d{5}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CP" type="ZipCode"/>
+	<xs:element name="CPRecepcion" type="ZipCode"/>
+	<xs:element name="Cantidad" type="xs:double"/>
+	<xs:element name="CentroEmisor" type="CenterNumber"/>
+
+	<xs:element name="CentroReceptor" type="CenterNumber"/>
+	<xs:element name="Codigo">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="18"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="CondicionesPago">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="60"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ContratoFactoring">
+
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="11"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CuentaAbono">
+		<xs:simpleType>
+
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="23"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CuentaCargo">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+
+				<xs:minLength value="1"/>
+				<xs:maxLength value="23"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Descripcion">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+
+				<xs:maxLength value="150"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Direccion">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="100"/>
+
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="DireccionRecepcion">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Folio">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+
+	</xs:element>
+	<xs:element name="FormaPago">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="25"/>
+				<xs:enumeration value="Contado"/>
+				<xs:enumeration value="ReciboDomiciliado"/>
+				<xs:enumeration value="Recibo"/>
+
+				<xs:enumeration value="Transferencia"/>
+				<xs:enumeration value="LetraAceptada"/>
+				<xs:enumeration value="CreditoDocumentado"/>
+				<xs:enumeration value="ContratoAdjudicacion"/>
+				<xs:enumeration value="Letra"/>
+				<xs:enumeration value="PagareAOrden"/>
+				<xs:enumeration value="Pagare"/>
+				<xs:enumeration value="Cheque"/>
+				<xs:enumeration value="Reposicion"/>
+
+				<xs:enumeration value="Especiales"/>
+				<xs:enumeration value="Compensa"/>
+				<xs:enumeration value="Giro"/>
+				<xs:enumeration value="Credito"/>
+				<xs:enumeration value="Tarjeta"/>
+				<xs:enumeration value="Confirming"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="Hoja">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="INE">
+		<xs:simpleType>
+
+			<xs:restriction base="xs:string">
+				<xs:length value="9"/>
+				<xs:pattern value="\d{9}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ImporteAbono" type="xs:double"/>
+	<xs:element name="ImporteCargo" type="xs:double"/>
+	<xs:element name="ImporteDescuento" type="xs:double"/>
+
+	<xs:element name="ImporteImpuesto" type="xs:double"/>
+	<xs:element name="ImporteVencimiento" type="xs:double"/>
+	<!-- Complex Elements -->
+	<xs:element name="Firma">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="Algoritmo" maxOccurs="unbounded"/>
+				<xs:element ref="MD"/>
+				<xs:element ref="DSIG"/>
+
+				<xs:element ref="BCs"/>
+				<xs:element ref="Objeto" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="tipo" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="DSIG"/>
+						<xs:enumeration value="GFPRESUMEDSIG"/>
+					</xs:restriction>
+
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="timestamp" type="xs:string" use="optional"/>
+			<xs:attribute name="firmante" type="xs:string" use="optional"/>
+			<xs:attribute name="secuencia" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Firmas">
+		<xs:complexType>
+
+			<xs:sequence>
+				<xs:element ref="Firma" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FacturaAdjunta">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+
+					<xs:attribute name="tipo" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="XML-GFP"/>
+								<xs:enumeration value="EDIFACT"/>
+								<xs:enumeration value="XML-AECOC"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+
+					<xs:attribute name="encoding" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="BASE64"/>
+								<xs:enumeration value="DER"/>
+								<xs:enumeration value="BER"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+
+					<xs:attribute name="compression" use="optional">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="GZIP"/>
+								<xs:enumeration value="NONE"/>
+								<xs:enumeration value="ZIP"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DocumentoAdjunto">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="compression"/>
+
+					<xs:attribute ref="IdTipoFactura" use="required"/>
+					<xs:attribute ref="format" use="required"/>
+					<xs:attribute ref="encoding"/>
+					<xs:attribute name="Plantilla" type="xs:long" use="optional"/>
+					<xs:attribute name="descripcion" use="optional">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="250"/>
+							</xs:restriction>
+
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DocumentosAdjuntos">
+		<xs:complexType>
+			<xs:sequence>
+
+				<xs:element ref="DocumentoAdjunto" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Cargo">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="BaseCargo" type="xs:double" minOccurs="0"/>
+				<xs:element ref="TipoCargo"/>
+
+				<xs:element ref="TasaCargo" minOccurs="0"/>
+				<xs:element ref="ImporteCargo" minOccurs="0"/>
+				<xs:element name="Descripcion" type="xs:string" minOccurs="0"/>
+			</xs:all>
+			<xs:attribute name="secuencia" type="xs:integer" use="optional"/>
+			<xs:attribute ref="IdTipoMoneda" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Cargos">
+
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Cargo" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Concepto">
+		<xs:complexType>
+			<xs:all>
+
+				<xs:element ref="Codigo" minOccurs="0"/>
+				<xs:element name="GTIN" type="EAN13" minOccurs="0"/>
+				<xs:element ref="Cantidad" minOccurs="0"/>
+				<xs:element name="FechaDevengo" type="Fecha" minOccurs="0"/>
+				<xs:element name="ElementosUnidadLogistica" type="xs:double" minOccurs="0"/>
+				<xs:element ref="Unidad" minOccurs="0"/>
+				<xs:element ref="Descripcion" minOccurs="0"/>
+				<xs:element ref="TextosPos" minOccurs="0"/>
+				<xs:element ref="PUnitario" minOccurs="0"/>
+
+				<xs:element name="PUnitarioNeto" type="xs:double" minOccurs="0"/>
+				<xs:element ref="BasePrecio" minOccurs="0"/>
+				<xs:element name="TotalNetoLinea" type="xs:double" minOccurs="0"/>
+				<xs:element name="TotalBrutoLinea" type="xs:double" minOccurs="0"/>
+				<xs:element ref="Cargos" minOccurs="0"/>
+				<xs:element ref="Descuentos" minOccurs="0"/>
+				<xs:element ref="Impuestos" minOccurs="0"/>
+				<xs:element ref="Tasas" minOccurs="0"/>
+				<xs:element ref="Referencias" minOccurs="0"/>
+
+				<xs:element ref="Extensiones" minOccurs="0"/>
+			</xs:all>
+			<xs:attribute ref="referencia"/>
+			<xs:attribute ref="IdTipoMoneda" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Conceptos">
+		<xs:complexType>
+			<xs:sequence>
+
+				<xs:element ref="Concepto" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConjuntoDatosFacturas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Empresas"/>
+				<xs:element ref="Facturas"/>
+
+			</xs:sequence>
+			<xs:attribute ref="IdRemesa"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Centros">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Centro" type="CenterNumber" maxOccurs="unbounded"/>
+			</xs:sequence>
+
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Descuento">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="BaseDescuento" type="xs:double" minOccurs="0"/>
+				<xs:element ref="TipoDescuento"/>
+				<xs:element ref="TasaDescuento" minOccurs="0"/>
+				<xs:element ref="ImporteDescuento" minOccurs="0"/>
+
+				<xs:element name="Descripcion" type="xs:string" minOccurs="0"/>
+			</xs:all>
+			<xs:attribute name="secuencia" type="xs:integer"/>
+			<xs:attribute ref="IdTipoMoneda" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Descuentos">
+		<xs:complexType>
+			<xs:sequence>
+
+				<xs:element ref="Descuento" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Empresa">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="RSocial"/>
+				<xs:element ref="Direccion"/>
+
+				<xs:element name="CP" type="ZipCode"/>
+				<xs:element ref="Localidad"/>
+				<xs:element ref="Provincia" minOccurs="0"/>
+				<xs:element ref="Pais"/>
+				<xs:element ref="CNAE" minOccurs="0"/>
+				<xs:element ref="INE" minOccurs="0"/>
+				<xs:element ref="Telefono" minOccurs="0"/>
+				<xs:element ref="Fax" minOccurs="0"/>
+				<xs:element name="Email" type="EmailAddress" minOccurs="0"/>
+
+				<xs:element name="Web" type="URL" minOccurs="0"/>
+				<xs:element ref="RMercantil" minOccurs="0"/>
+				<xs:element ref="Tomo" minOccurs="0"/>
+				<xs:element ref="Libro" minOccurs="0"/>
+				<xs:element ref="Seccion" minOccurs="0"/>
+				<xs:element ref="Folio" minOccurs="0"/>
+				<xs:element ref="Hoja" minOccurs="0"/>
+				<xs:element ref="Centros" minOccurs="0"/>
+			</xs:all>
+
+			<xs:attribute ref="CIF" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Centro">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Numero" type="NumeroCentro"/>
+				<xs:element ref="TipoRol"/>
+				<xs:element name="Nombre" type="NombreCentro"/>
+
+				<xs:element ref="Direccion"/>
+				<xs:element ref="CP"/>
+				<xs:element ref="Localidad"/>
+				<xs:element ref="Provincia"/>
+				<xs:element ref="Telefono" minOccurs="0"/>
+				<xs:element ref="Fax" minOccurs="0"/>
+				<xs:element name="Email" type="EmailAddress" minOccurs="0"/>
+				<xs:element ref="GLN" minOccurs="0"/>
+				<xs:element name="GLNFisico" type="EAN13" minOccurs="0"/>
+
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Empresas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Empresa" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+
+	</xs:element>
+	<xs:element name="Cabecera">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Fecha">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:restriction base="Fecha"/>
+						</xs:simpleContent>
+
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="CondicionesPago" minOccurs="0"/>
+				<xs:element ref="ContratoFactoring" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Recepcion">
+		<xs:complexType>
+
+			<xs:all>
+				<xs:element name="CIFRecepcion" type="CIF" minOccurs="0"/>
+				<xs:element ref="RSocialRecepcion"/>
+				<xs:element ref="DireccionRecepcion"/>
+				<xs:element ref="CPRecepcion"/>
+				<xs:element ref="LocalidadRecepcion"/>
+				<xs:element ref="ProvinciaRecepcion" minOccurs="0"/>
+				<xs:element ref="PaisRecepcion" minOccurs="0"/>
+			</xs:all>
+
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Imagenes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Imagen" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Imagen">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ModeloImagen" maxOccurs="unbounded"/>
+				<xs:element ref="Propiedades"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Propiedades">
+
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Propiedad" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Propiedad">
+		<xs:complexType>
+			<xs:simpleContent>
+
+				<xs:extension base="xs:string">
+					<xs:attribute name="clave" type="xs:string"/>
+					<xs:attribute name="grupo" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Papel">
+		<xs:complexType>
+
+			<xs:attribute name="Pasarela" use="optional" default="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[01]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="copias" use="optional">
+				<xs:simpleType>
+
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+						<xs:maxInclusive value="99"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Canales">
+
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Email" minOccurs="0"/>
+				<xs:element ref="Papel" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Email">
+		<xs:complexType>
+
+			<xs:sequence>
+				<xs:element name="DirEmail" type="EmailAddress" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="type" type="typeEmail" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FacturaGeneral">
+		<xs:complexType>
+			<xs:all>
+
+				<xs:element ref="Cabecera"/>
+				<xs:element name="IdentificacionEmisor" type="SrcParty" minOccurs="0"/>
+				<xs:element name="IdentificacionReceptor" type="DstParty" minOccurs="0"/>
+				<xs:element name="IdentificacionPagador" type="ThirdParty" minOccurs="0"/>
+				<xs:element name="IdentificacionReceptorPago" type="ThirdParty" minOccurs="0"/>
+				<xs:element name="IdentificacionEmisorFactura" type="ThirdParty" minOccurs="0"/>
+				<xs:element name="IdentificacionReceptorFactura" type="ThirdParty" minOccurs="0"/>
+				<xs:element name="IdentificacionClienteFinal" type="ThirdParty" minOccurs="0"/>
+				<xs:element name="IdentificacionEnvio" type="ThirdParty" minOccurs="0"/>
+
+				<xs:element ref="Referencias" minOccurs="0"/>
+				<xs:element ref="Albaranes" minOccurs="0"/>
+				<xs:element ref="Conceptos" minOccurs="0"/>
+				<xs:element ref="Descuentos" minOccurs="0"/>
+				<xs:element ref="Cargos" minOccurs="0"/>
+				<xs:element ref="Textos" minOccurs="0"/>
+				<xs:element ref="Impuestos" minOccurs="0"/>
+				<xs:element ref="Tasas" minOccurs="0"/>
+				<xs:element ref="Vencimientos" minOccurs="0"/>
+
+				<xs:element ref="TotalesFactura" minOccurs="0"/>
+				<xs:element ref="Firmas" minOccurs="0"/>
+				<xs:element ref="Imagenes" minOccurs="0"/>
+				<xs:element ref="FacturaAdjunta" minOccurs="0"/>
+				<xs:element ref="DocumentosAdjuntos" minOccurs="0"/>
+				<xs:element ref="Extensiones" minOccurs="0"/>
+				<xs:element ref="Recepcion" minOccurs="0"/>
+				<xs:element ref="Canales" minOccurs="0"/>
+			</xs:all>
+
+			<xs:attribute ref="Nfactura" use="required"/>
+			<xs:attribute ref="IdTipoMoneda" use="required"/>
+			<xs:attribute name="ImporteTotal" type="xs:double" use="required"/>
+			<xs:attribute name="CIFEmisor" type="CIF"/>
+			<xs:attribute name="CIFReceptor" type="CIF"/>
+			<xs:attribute ref="Plantilla" use="optional"/>
+			<xs:attribute name="Serie" type="SerieFactura"/>
+			<xs:attribute name="SerieFacturaAbonada"/>
+			<xs:attribute ref="IdTipoFactura" use="required"/>
+
+			<xs:attribute name="NfacturaAbonada" type="InvoiceNumber"/>
+			<xs:attribute ref="source" use="optional"/>
+			<xs:attribute name="IdGFP" type="xs:integer" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Facturas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FacturaGeneral" maxOccurs="unbounded"/>
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Impuesto">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="BaseImponible" type="xs:double" minOccurs="0"/>
+				<xs:element ref="TipoImpuesto"/>
+				<xs:element ref="TasaImpuesto"/>
+
+				<xs:element ref="ImporteImpuesto" minOccurs="0"/>
+				<xs:element ref="TasaRecargoEquivalencia" minOccurs="0"/>
+				<xs:element ref="ImporteRecargoEquivalencia" minOccurs="0"/>
+				<xs:element ref="Conversion" minOccurs="0"/>
+			</xs:all>
+			<xs:attribute name="secuencia" type="xs:integer"/>
+			<xs:attribute ref="IdTipoMoneda" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Conversion">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Impuesto" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Impuestos">
+		<xs:complexType>
+
+			<xs:sequence>
+				<xs:element ref="Impuesto" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Libro">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Localidad">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="40"/>
+
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="LocalidadRecepcion">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NCliente" type="xs:string"/>
+	<xs:element name="NfacturaAbonada">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="20"/>
+			</xs:restriction>
+
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NreferenciaCliente">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="20"/>
+			</xs:restriction>
+		</xs:simpleType>
+
+	</xs:element>
+	<xs:element name="NreferenciaProveedor">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="20"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="PUnitario" type="xs:double"/>
+	<xs:element name="Pais" type="Country"/>
+	<xs:element name="PorcentajeReferencia" type="Percent"/>
+	<xs:element name="Provincia">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="30"/>
+				<xs:minLength value="1"/>
+			</xs:restriction>
+
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ProvinciaRecepcion">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="20"/>
+			</xs:restriction>
+		</xs:simpleType>
+
+	</xs:element>
+	<xs:element name="RMercantil">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="RSocial">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="60"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="RSocialRecepcion">
+
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="60"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ReferenciaCliente">
+		<xs:simpleType>
+
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="15"/>
+				<xs:enumeration value="Otros"/>
+				<xs:enumeration value="Expediente"/>
+				<xs:enumeration value="Contrato"/>
+				<xs:enumeration value="Pedido"/>
+				<xs:enumeration value="Albaran"/>
+				<xs:enumeration value="FacturaRectificada"/>
+
+				<xs:enumeration value="CodigoArticulo"/>
+				<xs:enumeration value="Presupuesto"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ReferenciaProveedor">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+
+				<xs:maxLength value="15"/>
+				<xs:enumeration value="Otros"/>
+				<xs:enumeration value="Expediente"/>
+				<xs:enumeration value="Contrato"/>
+				<xs:enumeration value="Pedido"/>
+				<xs:enumeration value="Albaran"/>
+				<xs:enumeration value="FacturaRectificada"/>
+				<xs:enumeration value="CodigoArticulo"/>
+				<xs:enumeration value="Presupuesto"/>
+
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:complexType name="ReferenciadoType">
+		<xs:sequence>
+			<xs:element ref="NfacturaAbonada"/>
+			<xs:element ref="ImporteAbono"/>
+			<xs:element ref="PorcentajeReferencia"/>
+			<xs:element ref="TipoImpuesto"/>
+
+			<xs:element ref="TasaImpuesto"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Seccion">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+
+		</xs:simpleType>
+	</xs:element>
+	<xs:complexType name="SimpleType">
+		<xs:sequence>
+			<xs:element ref="ImporteAbono"/>
+			<xs:element ref="TipoImpuesto"/>
+			<xs:element ref="TasaImpuesto"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="TasaCargo">
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal">
+				<xs:fractionDigits value="2"/>
+				<xs:totalDigits value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="TasaDescuento" type="Percent"/>
+
+	<xs:element name="TasaImpuesto" type="Percent"/>
+	<xs:element name="Telefono" type="PhoneNumber"/>
+	<xs:element name="Fax" type="PhoneNumber"/>
+	<xs:element name="Textos">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Texto1" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto2" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto3" type="InvoiceFreeText" minOccurs="0"/>
+
+				<xs:element name="Texto4" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto5" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto6" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto7" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto8" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto9" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto10" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto11" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto12" type="InvoiceFreeText" minOccurs="0"/>
+
+				<xs:element name="Texto13" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto14" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto15" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto16" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto17" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto18" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto19" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto20" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto21" type="InvoiceFreeText" minOccurs="0"/>
+
+				<xs:element name="Texto22" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto23" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto24" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto25" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto26" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto27" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto28" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto29" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto30" type="InvoiceFreeText" minOccurs="0"/>
+
+				<xs:element name="Texto31" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto32" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto33" type="InvoiceFreeText" minOccurs="0"/>
+				<xs:element name="Texto34" type="InvoiceFreeText" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TextosPos">
+		<xs:complexType>
+
+			<xs:all>
+				<xs:element name="TextPos11" type="LineFreeText" minOccurs="0"/>
+				<xs:element name="TextPos21" type="LineFreeText" minOccurs="0"/>
+				<xs:element name="TextPos31" type="LineFreeText" minOccurs="0"/>
+				<xs:element name="TextPos41" type="LineFreeText" minOccurs="0"/>
+				<xs:element name="TextPos51" type="LineFreeText" minOccurs="0"/>
+				<xs:element name="TextPos61" type="LineFreeText" minOccurs="0"/>
+				<xs:element name="TextPos71" type="LineFreeText" minOccurs="0"/>
+				<xs:element name="TextPos81" type="LineFreeText" minOccurs="0"/>
+
+				<xs:element name="TextPos91" type="LineFreeText" minOccurs="0"/>
+				<xs:element name="TextPos101" type="LineFreeText" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TipoCargo">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+
+				<xs:maxLength value="20"/>
+				<xs:enumeration value="Fletes"/>
+				<xs:enumeration value="Embalajes"/>
+				<xs:enumeration value="Montajes"/>
+				<xs:enumeration value="Seguros"/>
+				<xs:enumeration value="Envases"/>
+				<xs:enumeration value="Otros"/>
+				<xs:enumeration value="Portes"/>
+				<xs:enumeration value="Financiacion"/>
+
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="TipoDescuento">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="20"/>
+				<xs:enumeration value="ProntoPago"/>
+
+				<xs:enumeration value="Comercial"/>
+				<xs:enumeration value="EnvaseRetornado"/>
+				<xs:enumeration value="Rappel"/>
+				<xs:enumeration value="Otros"/>
+				<xs:enumeration value="Subvencion"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="TipoImpuesto">
+
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="20"/>
+				<xs:enumeration value="IVA"/>
+				<xs:enumeration value="IPSI"/>
+				<xs:enumeration value="IGIC"/>
+				<xs:enumeration value="IRPF"/>
+				<xs:enumeration value="Otro"/>
+
+				<xs:enumeration value="Ninguno"/>
+				<xs:enumeration value="ITPAJD"/>
+				<xs:enumeration value="IE"/>
+				<xs:enumeration value="Ra"/>
+				<xs:enumeration value="IGTECM"/>
+				<xs:enumeration value="IECDPCAC"/>
+				<xs:enumeration value="IIIMAB"/>
+				<xs:enumeration value="ICIO"/>
+				<xs:enumeration value="IMVDN"/>
+
+				<xs:enumeration value="IMSN"/>
+				<xs:enumeration value="IMGSN"/>
+				<xs:enumeration value="IMPN"/>
+				<xs:enumeration value="TVA"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Tomo">
+		<xs:simpleType>
+
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Unidad">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+
+				<xs:minLength value="1"/>
+				<xs:maxLength value="10"/>
+				<xs:enumeration value="Unidades"/>
+				<xs:enumeration value="Horas"/>
+				<xs:enumeration value="Kilogramos"/>
+				<xs:enumeration value="Litros"/>
+				<xs:enumeration value="Otros"/>
+				<xs:enumeration value="Brick"/>
+				<xs:enumeration value="Bolsas"/>
+
+				<xs:enumeration value="Botellas"/>
+				<xs:enumeration value="Gramos"/>
+				<xs:enumeration value="Latas"/>
+				<xs:enumeration value="Metros"/>
+				<xs:enumeration value="Milimetros"/>
+				<xs:enumeration value="Paquetes"/>
+				<xs:enumeration value="Raciones"/>
+				<xs:enumeration value="CentimetrosCubicos"/>
+				<xs:enumeration value="Centilitros"/>
+
+				<xs:enumeration value="Centimetros"/>
+				<xs:enumeration value="Kilometros"/>
+				<xs:enumeration value="Bombonas"/>
+				<xs:enumeration value="UN"/>
+				<xs:enumeration value="LM"/>
+				<xs:enumeration value="KGM"/>
+				<xs:enumeration value="M"/>
+				<xs:enumeration value="KG"/>
+				<xs:enumeration value="Cajas"/>
+
+				<xs:enumeration value="Bandeja"/>
+				<xs:enumeration value="Barril"/>
+				<xs:enumeration value="Bidon"/>
+				<xs:enumeration value="Bote"/>
+				<xs:enumeration value="Cubo"/>
+				<xs:enumeration value="Docena"/>
+				<xs:enumeration value="Estuche"/>
+				<xs:enumeration value="Garrafa"/>
+				<xs:enumeration value="Manojo"/>
+
+				<xs:enumeration value="Metro"/>
+				<xs:enumeration value="Millar"/>
+				<xs:enumeration value="Pack"/>
+				<xs:enumeration value="Rollo"/>
+				<xs:enumeration value="Sobre"/>
+				<xs:enumeration value="Tarrina"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="Vencimiento">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FormaPago" minOccurs="0"/>
+				<xs:sequence>
+					<xs:choice>
+						<xs:element name="FechaVencimiento" type="Fecha"/>
+						<xs:element name="PeriodoVencimiento" type="xs:double"/>
+					</xs:choice>
+
+					<xs:choice>
+						<xs:element ref="ImporteVencimiento" minOccurs="0"/>
+						<xs:element name="PorcentajeVencimiento" type="xs:double" minOccurs="0"/>
+					</xs:choice>
+				</xs:sequence>
+				<xs:choice minOccurs="0">
+					<xs:element ref="CuentaAbono" minOccurs="0"/>
+					<xs:element name="IBANAbono" minOccurs="0">
+						<xs:simpleType>
+
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="34"/>
+								<xs:minLength value="16"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:choice>
+				<xs:choice minOccurs="0">
+					<xs:element ref="CuentaCargo" minOccurs="0"/>
+
+					<xs:element name="IBANCargo" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="34"/>
+								<xs:minLength value="16"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:choice>
+
+			</xs:sequence>
+			<xs:attribute ref="IdTipoMoneda" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Vencimientos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Vencimiento" maxOccurs="unbounded"/>
+			</xs:sequence>
+
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Web" type="URL"/>
+	<xs:complexType name="Fecha">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="formato" use="optional">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReferenciaCliente">
+		<xs:sequence>
+
+			<xs:element ref="ReferenciaCliente" minOccurs="0"/>
+			<xs:element ref="NreferenciaCliente"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReferenciaProveedor">
+		<xs:sequence>
+			<xs:element ref="ReferenciaProveedor"/>
+			<xs:element ref="NreferenciaProveedor"/>
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="Referencias">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Cliente" type="ReferenciaCliente" minOccurs="0"/>
+				<xs:element name="Proveedor" type="ReferenciaProveedor" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Extension">
+		<xs:simpleContent>
+			<xs:extension base="xs:anySimpleType">
+				<xs:attribute name="nombre" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+
+				</xs:attribute>
+				<xs:attribute name="tipo" use="optional">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="Extensiones">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Extension" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="Extension">
+
+								<xs:attribute name="id" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string"/>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Albaran">
+		<xs:sequence>
+			<xs:element name="EntradaAlbaran" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:anySimpleType">
+
+							<xs:attribute name="id" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="20"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="nombre" use="required">
+								<xs:simpleType>
+
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="50"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="tipo" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="30"/>
+
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" use="optional">
+
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Albaranes">
+		<xs:complexType>
+
+			<xs:sequence>
+				<xs:element name="Albaran" type="Albaran" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CIFRecepcion" type="CIF"/>
+	<!--Tanto en SrcParty como DstParty en caso de venir Centro y GLN manda el GLN-->
+	<xs:complexType name="SrcParty">
+		<xs:all>
+
+			<xs:element name="Centro" type="CenterNumber" minOccurs="0"/>
+			<xs:element ref="GLN" minOccurs="0"/>
+			<xs:element name="NumeroProveedor" type="PartyNumber" minOccurs="0"/>
+			<xs:element name="GLNFisico" type="EAN13" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="DstParty">
+		<xs:all>
+			<xs:element name="Centro" type="CenterNumber" minOccurs="0"/>
+
+			<xs:element ref="GLN" minOccurs="0"/>
+			<xs:element name="NumeroCliente" type="PartyNumber" minOccurs="0"/>
+			<xs:element name="GLNFisico" type="EAN13" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<!--Tanto en SrcParty como DstParty en caso de venir Centro y GLN manda el GLN-->
+	<xs:complexType name="ThirdParty">
+		<xs:choice>
+			<xs:element name="Numero" type="PartyNumber"/>
+
+			<xs:element ref="GLN"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="TotalesFactura">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ImporteBruto" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BaseImponible" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TotalCargosGenerales" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TotalDescuentosGenerales" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DiferencialCargosDescuentosGenerales" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TotalImpuestos" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TotalTasas" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TotalAPagar" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Canon" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+								<xs:attribute name="tipo" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TotalLineasPositivo" minOccurs="0">
+					<xs:complexType>
+
+						<xs:simpleContent>
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TotalLineasNegativo" minOccurs="0">
+					<xs:complexType>
+
+						<xs:simpleContent>
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TotalAnticipos" minOccurs="0">
+					<xs:complexType>
+
+						<xs:simpleContent>
+							<xs:extension base="xs:double">
+								<xs:attribute ref="IdTipoMoneda" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+
+	</xs:element>
+	<xs:element name="Canon">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:double">
+					<xs:attribute name="tipo" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50"/>
+
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TasaRecargoEquivalencia" type="xs:double"/>
+	<xs:element name="ImporteRecargoEquivalencia" type="xs:double"/>
+
+	<xs:element name="TipoTasa">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="30"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Tasa">
+
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="BaseTasa" type="xs:double" minOccurs="0"/>
+				<xs:element ref="TipoTasa"/>
+				<xs:element name="PorcentajeTasa" type="xs:double" minOccurs="0"/>
+				<xs:element name="ImporteTasa" type="xs:double" minOccurs="0"/>
+			</xs:all>
+			<xs:attribute ref="IdTipoMoneda" use="optional"/>
+		</xs:complexType>
+
+	</xs:element>
+	<xs:element name="Tasas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Tasa" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MD">
+
+		<xs:complexType>
+			<xs:attribute name="tipo" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="MD2"/>
+						<xs:enumeration value="MD4"/>
+						<xs:enumeration value="MD5"/>
+						<xs:enumeration value="SHA1"/>
+					</xs:restriction>
+
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="encoding">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="BASE64"/>
+						<xs:enumeration value="DER"/>
+						<xs:enumeration value="BER"/>
+					</xs:restriction>
+
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="timestamp" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DSIG">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+
+					<xs:attribute name="tipo" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="RSA"/>
+								<xs:enumeration value="DSA"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute ref="encoding" use="required"/>
+
+					<xs:attribute name="format" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="PKCS7"/>
+								<xs:enumeration value="SIGNEDHASH"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="timestamp" type="xs:string" use="optional"/>
+
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BC">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Imagen"/>
+			</xs:sequence>
+
+			<xs:attribute name="type" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="PDF417"/>
+						<xs:enumeration value="GFP"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="algorithm" type="xs:string" use="optional"/>
+
+			<xs:attribute name="version" type="xs:string" use="optional"/>
+			<xs:attribute name="timestamp" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BCs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BC" maxOccurs="unbounded"/>
+			</xs:sequence>
+
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Objeto">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="tipo" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+
+								<xs:enumeration value="CERT"/>
+								<xs:enumeration value="PUBKEY"/>
+								<xs:enumeration value="PRIVKEY"/>
+								<xs:enumeration value="WRAPPEDKEY"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="algoritmo" type="xs:string" use="required"/>
+					<xs:attribute name="version" type="xs:string" use="optional"/>
+
+					<xs:attribute name="encoding" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Algoritmo">
+		<xs:complexType>
+			<xs:attribute name="tipo" use="required">
+				<xs:simpleType>
+
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="DSIG"/>
+						<xs:enumeration value="HMAC"/>
+						<xs:enumeration value="MD"/>
+						<xs:enumeration value="COMPRESS"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="nombre" use="required">
+
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="MD5WithRSA"/>
+						<xs:enumeration value="SHAWithDSA"/>
+						<xs:enumeration value="MD5"/>
+						<xs:enumeration value="MD4"/>
+						<xs:enumeration value="MD2"/>
+						<xs:enumeration value="LZW"/>
+					</xs:restriction>
+
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="version" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ModeloImagen">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+
+					<xs:attribute name="nombre" type="xs:string" use="optional"/>
+					<xs:attribute name="type" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="ENCODEDINVOICE"/>
+								<xs:enumeration value="ENCODEDLOGO"/>
+								<xs:enumeration value="ENCODEDSIGNATURE"/>
+							</xs:restriction>
+						</xs:simpleType>
+
+					</xs:attribute>
+					<xs:attribute name="formato" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="GIF"/>
+								<xs:enumeration value="JPG"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+
+					<xs:attribute name="encoding" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="BASE64"/>
+								<xs:enumeration value="BER"/>
+								<xs:enumeration value="DER"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:attribute name="IdTipoFactura">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="FacturaComercial"/>
+				<xs:enumeration value="NotaAbono"/>
+
+				<xs:enumeration value="NotaCargo"/>
+				<xs:enumeration value="NotaSuplido"/>
+				<xs:enumeration value="Autofactura"/>
+				<xs:enumeration value="Albaran"/>
+				<xs:enumeration value="Contrato"/>
+				<xs:enumeration value="AutofacturaFirmaReceptor"/>
+				<xs:enumeration value="AttachmentGenerico"/>
+				<xs:enumeration value="Deposito"/>
+				<xs:enumeration value="FacturaRectificativa"/>
+
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:element name="TipoRol">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Compras"/>
+				<xs:enumeration value="Ventas"/>
+			</xs:restriction>
+
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>
