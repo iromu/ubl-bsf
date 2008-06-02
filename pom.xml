@@ -43,12 +43,14 @@
 			<url>LICENSE.txt</url>
 		</license>
 	</licenses>
+	<scm>
 		<connection>
 			scm:svn:https://ciberia.ath.cx/svn/freelance/ubl-bsf/trunk
 		</connection>
 		<developerConnection>
 			scm:svn:https://ciberia.ath.cx/svn/freelance/ubl-bsf/trunk
 		</developerConnection>
+	</scm>
 	<build>
 		<plugins>
 			<plugin>
