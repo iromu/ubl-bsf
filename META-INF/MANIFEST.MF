@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: wantez
+Build-Jdk: 1.6.0
+Main-Class: irm.ubl2bsf.Batch
+Class-Path: log4j-1.2.14.jar
+
