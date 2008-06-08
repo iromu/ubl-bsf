@@ -1,0 +1,1436 @@
+<?xml version="1.0"  encoding="ISO-8859-1"?>
+<Invoice
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-1.0"
+	xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnspecializedDatatypes-1.0"
+	xmlns:sdt="urn:oasis:names:specification:ubl:schema:xsd:SpecializedDatatypes-1.0"
+	xmlns:cur="urn:oasis:names:specification:ubl:schema:xsd:CurrencyCode-1.0"
+	xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-1.0"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-1.0"
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-1.0  http://docs.oasis-open.org/ubl/cd-UBL-1.0/xsd/maindoc/UBL-Invoice-1.0.xsd">
+	<ID>A 20080010</ID>
+	<GUID>2008060311211302-02B64814890000002-FAA20080010</GUID>
+	<cbc:IssueDate>2008-05-30</cbc:IssueDate>
+	<InvoiceTypeCode>380</InvoiceTypeCode>
+	<cbc:Note>
+		COMENTARIO DOCUMENTO: Aeropuerto Madrid P.O. 8432897001877 Ref.
+		Tienda Airport Market
+	</cbc:Note>
+	<TaxPointDate>2008-05-30</TaxPointDate>
+	<InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+	<DespatchDocumentReference>
+		<cac:ID>2008017</cac:ID>
+	</DespatchDocumentReference>
+	<cac:BuyerParty>
+		<cac:SellerAssignedAccountID>
+			000002
+		</cac:SellerAssignedAccountID>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cac:ID identificationSchemeName="CIF/NIF">
+					A08225013
+				</cac:ID>
+			</cac:PartyIdentification>
+			<cac:PartyIdentification>
+				<cac:ID identificationSchemeName="EAN">
+					[8432897010008]
+				</cac:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>AREAS, S.A.</cbc:Name>
+			</cac:PartyName>
+			<cac:Address>
+				<cbc:CityName>Barcelona</cbc:CityName>
+				<cbc:PostalZone>08006</cbc:PostalZone>
+				<cbc:CountrySubentity>Barcelona</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>Via Augusta, 21-23</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:Name>España</cbc:Name>
+				</cac:Country>
+			</cac:Address>
+			<cac:Contact>
+				<cbc:Name>Sra. Carme Porcel</cbc:Name>
+				<cbc:Telephone>932401515</cbc:Telephone>
+				<cbc:Telefax>932401518</cbc:Telefax>
+				<cbc:ElectronicMail>
+					carme.porcel@areas.es
+				</cbc:ElectronicMail>
+			</cac:Contact>
+			<cac:Language>
+				<cac:ID>ES</cac:ID>
+			</cac:Language>
+		</cac:Party>
+	</cac:BuyerParty>
+	<cac:SellerParty>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cac:ID identificationSchemeName="CIF/NIF">
+					B64814890
+				</cac:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>FLIGHT TAG, S.L.</cbc:Name>
+			</cac:PartyName>
+			<cac:Address>
+				<cbc:CityName>BARCELONA</cbc:CityName>
+				<cbc:PostalZone>08006</cbc:PostalZone>
+				<cbc:CountrySubentity>BARCELONA</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>BALMES, 201, PRAL. 1ª</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:Name>España</cbc:Name>
+				</cac:Country>
+			</cac:Address>
+			<cac:Contact></cac:Contact>
+			<cac:Language>
+				<cac:ID>ES</cac:ID>
+			</cac:Language>
+		</cac:Party>
+	</cac:SellerParty>
+	<cac:PaymentMeans>
+		<cac:PaymentMeansCode>ZZZ</cac:PaymentMeansCode>
+		<cac:Payment>
+			<cac:ID>05 - [Confirming] a 90 dias</cac:ID>
+		</cac:Payment>
+	</cac:PaymentMeans>
+	<cac:PaymentTerms>
+		<cac:ID>1</cac:ID>
+		<cbc:Note>3761.18</cbc:Note>
+		<cac:SettlementPeriod>
+			<cbc:EndDateTime>2008-09-05T00:00:00</cbc:EndDateTime>
+		</cac:SettlementPeriod>
+	</cac:PaymentTerms>
+	<cac:TaxTotal>
+		<cbc:TotalTaxAmount amountCurrencyID="EUR">
+			518.78
+		</cbc:TotalTaxAmount>
+		<cac:TaxSubTotal>
+			<cbc:TaxableAmount amountCurrencyID="EUR">
+				3242.40
+			</cbc:TaxableAmount>
+			<cbc:TaxAmount amountCurrencyID="EUR">518.78</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubTotal>
+	</cac:TaxTotal>
+	<cac:LegalTotal>
+		<cbc:LineExtensionTotalAmount amountCurrencyID="EUR">
+			3242.40
+		</cbc:LineExtensionTotalAmount>
+		<cbc:TaxExclusiveTotalAmount amountCurrencyID="EUR">
+			3242.40
+		</cbc:TaxExclusiveTotalAmount>
+		<cbc:TaxInclusiveTotalAmount amountCurrencyID="EUR">
+			3761.18
+		</cbc:TaxInclusiveTotalAmount>
+	</cac:LegalTotal>
+	<cac:InvoiceLine>
+		<cac:ID>1</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				SVQ-Camiseta Mujer Blanca S
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350564</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>S</cac:DescriptionCode>
+					<cbc:Description>Pequeña</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>1</cac:DescriptionCode>
+					<cbc:Description>Blanca</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350564</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>2</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				SVQ-Camiseta Mujer Blanca M
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350571</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>M</cac:DescriptionCode>
+					<cbc:Description>Mediana</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>1</cac:DescriptionCode>
+					<cbc:Description>Blanca</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350571</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>3</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				SVQ-Camiseta Mujer Blanca L
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350588</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>L</cac:DescriptionCode>
+					<cbc:Description>Large</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>1</cac:DescriptionCode>
+					<cbc:Description>Blanca</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350588</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>4</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				SCQ-Camiseta Mujer Negra S
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350502</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>S</cac:DescriptionCode>
+					<cbc:Description>Pequeña</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>5</cac:DescriptionCode>
+					<cbc:Description>Negra</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350502</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>5</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				SCQ-Camiseta Mujer Negra M
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350519</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>M</cac:DescriptionCode>
+					<cbc:Description>Mediana</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>5</cac:DescriptionCode>
+					<cbc:Description>Negra</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350519</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>6</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				SCQ-Camiseta Mujer Negra L
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350526</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>L</cac:DescriptionCode>
+					<cbc:Description>Large</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>5</cac:DescriptionCode>
+					<cbc:Description>Negra</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350526</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>7</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>MAD-Camiseta Mujer Roja S</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350168</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>S</cac:DescriptionCode>
+					<cbc:Description>Pequeña</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>4</cac:DescriptionCode>
+					<cbc:Description>Roja</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350168</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>8</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>MAD-Camiseta Mujer Roja M</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350175</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>M</cac:DescriptionCode>
+					<cbc:Description>Mediana</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>4</cac:DescriptionCode>
+					<cbc:Description>Roja</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350175</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>9</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>MAD-Camiseta Mujer Roja L</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350182</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>L</cac:DescriptionCode>
+					<cbc:Description>Large</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>4</cac:DescriptionCode>
+					<cbc:Description>Roja</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350182</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>10</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				ALC-Camiseta Mujer Verde S
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524979</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>S</cac:DescriptionCode>
+					<cbc:Description>Pequeña</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>3</cac:DescriptionCode>
+					<cbc:Description>Verde</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524979</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>11</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				ALC-Camiseta Mujer Verde M
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524986</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>M</cac:DescriptionCode>
+					<cbc:Description>Mediana</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>3</cac:DescriptionCode>
+					<cbc:Description>Verde</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524986</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>12</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				ALC-Camiseta Mujer Verde L
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524993</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>L</cac:DescriptionCode>
+					<cbc:Description>Large</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>3</cac:DescriptionCode>
+					<cbc:Description>Verde</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524993</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>13</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>MAH-Camiseta Mujer Azul S</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350236</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>S</cac:DescriptionCode>
+					<cbc:Description>Pequeña</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>2</cac:DescriptionCode>
+					<cbc:Description>Azul</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350236</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>14</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>MAH-Camiseta Mujer Azul M</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350243</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>M</cac:DescriptionCode>
+					<cbc:Description>Mediana</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>2</cac:DescriptionCode>
+					<cbc:Description>Azul</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350243</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>15</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>MAH-Camiseta Mujer Azul L</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350250</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>L</cac:DescriptionCode>
+					<cbc:Description>Large</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>2</cac:DescriptionCode>
+					<cbc:Description>Azul</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350250</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>16</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				BCN-Camiseta Mujer Gris S (2007)
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524160</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>S</cac:DescriptionCode>
+					<cbc:Description>Pequeña</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>6</cac:DescriptionCode>
+					<cbc:Description>Gris</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524160</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>17</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				BCN-Camiseta Mujer Gris M (2007)
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524177</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>M</cac:DescriptionCode>
+					<cbc:Description>Mediana</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>6</cac:DescriptionCode>
+					<cbc:Description>Gris</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524177</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>18</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			126.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				BCN-Camiseta Mujer Gris L (2007)
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524184</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>L</cac:DescriptionCode>
+					<cbc:Description>Large</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>6</cac:DescriptionCode>
+					<cbc:Description>Gris</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524184</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					10.50
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				10.50
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>19</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			48
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			321.60
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				I'M FLYING-Bolsa plegable-reversible Negra
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524306</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>3</cac:DescriptionCode>
+					<cbc:Description>Negro</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524306</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					6.70
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				6.70
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>20</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			24
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			134.40
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				I'M FLYING-Cojin plegable Negro
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524337</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>3</cac:DescriptionCode>
+					<cbc:Description>Negro</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524337</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					5.60
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				5.60
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>21</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			48
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			48.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				I'M FLYING-Set 4 lápices negros
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524351</cac:ID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>84370008524351</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					1.00
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				1.00
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>22</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			40
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			120.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				I'M FLYING-Cuaderno con goma elástica Negro
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524375</cac:ID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524375</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					3.00
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				3.00
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>23</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			48
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			67.20
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				I'M FLYING-Identificador de maleta
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524603</cac:ID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524603</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					1.40
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				1.40
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>24</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			24
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			67.20
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				I'M FLYING-Taza porcelana Blanca
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524689</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>color</cac:AttributeID>
+					<cac:DescriptionCode>5</cac:DescriptionCode>
+					<cbc:Description>Blanca</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524689</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					2.80
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				2.80
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>25</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			24
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			67.20
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				I'M FLYING-Taza porcelana Negra
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524726</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>color</cac:AttributeID>
+					<cac:DescriptionCode>6</cac:DescriptionCode>
+					<cbc:Description>Negra</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524726</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					2.80
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				2.80
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>26</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			1
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			0.00
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				Mueble Expositor Madrid (MAD)
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8436046350199</cac:ID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8436046350199</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					0.00
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				0.00
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>27</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			74.40
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				I'M FLYING-Camiseta Niño S
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524634</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>S</cac:DescriptionCode>
+					<cbc:Description>Pequeña</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>1</cac:DescriptionCode>
+					<cbc:Description>Blanca</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524634</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					6.20
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				6.20
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cac:ID>28</cac:ID>
+		<cbc:InvoicedQuantity quantityUnitCode="PCE">
+			12
+		</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount amountCurrencyID="EUR">
+			74.40
+		</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>
+				I'M FLYING-Camiseta Niño M
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cac:ID>8437008524719</cac:ID>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Talla</cac:AttributeID>
+					<cac:DescriptionCode>M</cac:DescriptionCode>
+					<cbc:Description>Mediana</cbc:Description>
+				</cac:PhysicalAttribute>
+				<cac:PhysicalAttribute>
+					<cac:AttributeID>Color</cac:AttributeID>
+					<cac:DescriptionCode>1</cac:DescriptionCode>
+					<cbc:Description>Blanca</cbc:Description>
+				</cac:PhysicalAttribute>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cac:ID>8437008524719</cac:ID>
+			</cac:StandardItemIdentification>
+			<cac:TaxCategory>
+				<cac:ID>VAT</cac:ID>
+				<cbc:Percent>16.0</cbc:Percent>
+				<cac:TaxScheme>
+					<cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+			<cac:BasePrice>
+				<cbc:PriceAmount amountCurrencyID="EUR"
+					amountCurrencyCodeListVersionID="0.3">
+					6.20
+				</cbc:PriceAmount>
+			</cac:BasePrice>
+		</cac:Item>
+		<cac:BasePrice>
+			<cbc:PriceAmount amountCurrencyID="EUR"
+				amountCurrencyCodeListVersionID="0.3">
+				6.20
+			</cbc:PriceAmount>
+		</cac:BasePrice>
+	</cac:InvoiceLine>
+</Invoice>
