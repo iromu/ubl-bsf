@@ -14,4 +14,4 @@
 #	See the License for the specific language governing permissions and
 #	limitations under the License.
 
-exec java -jar ubl-bsf-0.0.1.jar --import sample_import_dir/ --export sample_export_dir/
+exec java -jar ubl-bsf-0.0.2.jar --import sample_import_dir/ --export sample_export_dir/
