@@ -25,32 +25,32 @@ public class Parser {
 	private final Logger log = Logger.getLogger(this.getClass());
 	private javax.xml.transform.Transformer transformer;
 
-	public Parser(String xsl) {
-		javax.xml.transform.TransformerFactory tFactory = javax.xml.transform.TransformerFactory
+	public Parser(final String xsl) {
+		final javax.xml.transform.TransformerFactory tFactory = javax.xml.transform.TransformerFactory
 				.newInstance();
 		try {
-			InputStream stream = this.getClass().getClassLoader()
+			final InputStream stream = this.getClass().getClassLoader()
 					.getResourceAsStream(xsl);
-			transformer = tFactory
+			this.transformer = tFactory
 					.newTransformer(new javax.xml.transform.stream.StreamSource(
 							stream));
-		} catch (TransformerConfigurationException e) {
-			log.fatal(e, e);
+		} catch (final TransformerConfigurationException e) {
+			this.log.fatal(e, e);
 		}
 	}
 
-	public void parse(String input, String output) {
-
+	public void parse(final String input, final String output) {
+		this.log.info(input + " -> " + output);
 		try {
-			javax.xml.transform.stream.StreamSource streamSource = new javax.xml.transform.stream.StreamSource(
+			final javax.xml.transform.stream.StreamSource streamSource = new javax.xml.transform.stream.StreamSource(
 					input);
-			javax.xml.transform.stream.StreamResult streamResult = new javax.xml.transform.stream.StreamResult(
+			final javax.xml.transform.stream.StreamResult streamResult = new javax.xml.transform.stream.StreamResult(
 					new java.io.FileOutputStream(output));
-			transformer.transform(streamSource, streamResult);
-		} catch (FileNotFoundException e) {
-			log.fatal(e, e);
-		} catch (TransformerException e) {
-			log.fatal(e, e);
+			this.transformer.transform(streamSource, streamResult);
+		} catch (final FileNotFoundException e) {
+			this.log.fatal(e, e);
+		} catch (final TransformerException e) {
+			this.log.fatal(e, e);
 		}
 	}
 }

@@ -16,6 +16,8 @@
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:date="http://exslt.org/dates-and-times"
+	xmlns:payment="xalan://irm.ubl2bsf.util.Payment"
 	xmlns:country="xalan://irm.ubl2bsf.util.Country" version="1.0"
 	xmlns:inv="urn:oasis:names:specification:ubl:schema:xsd:Invoice-1.0"
 	xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnspecializedDatatypes-1.0"
@@ -24,7 +26,8 @@
 	xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-1.0"
 	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-1.0"
 	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-1.0"
-	exclude-result-prefixes="inv udt sdt cur ccts cbc cac country">
+	exclude-result-prefixes="inv udt sdt cur ccts cbc cac"
+	extension-element-prefixes="date payment country">
 
 	<xsl:output method="xml" indent="yes" encoding="ISO-8859-1" />
 
@@ -75,7 +78,8 @@
 								select="concat($cdata-o,cac:Address/cac:AddressLine/cbc:Line,$cdata-c)" />
 						</Direccion>
 						<CP>
-							<xsl:value-of select="cac:Address/cbc:PostalZone" />
+							<xsl:value-of
+								select="cac:Address/cbc:PostalZone" />
 						</CP>
 						<Localidad>
 							<xsl:value-of disable-output-escaping="yes"
@@ -89,19 +93,24 @@
 							<xsl:value-of disable-output-escaping="yes"
 								select="concat($cdata-o,country:parse(cac:Address/cac:Country/cbc:Name),$cdata-c)" />
 						</Pais>
-						<xsl:if test="seller/cac:Contact/cbc:Telephone">
+						<xsl:if
+							test="seller/cac:Contact/cbc:Telephone">
 							<Telefono>
-								<xsl:value-of select="seller/cac:Contact/cbc:Telephone" />
+								<xsl:value-of
+									select="seller/cac:Contact/cbc:Telephone" />
 							</Telefono>
 						</xsl:if>
 						<xsl:if test="cac:Contact/cbc:Telefax">
 							<Fax>
-								<xsl:value-of select="cac:Contact/cbc:Telefax" />
+								<xsl:value-of
+									select="cac:Contact/cbc:Telefax" />
 							</Fax>
 						</xsl:if>
-						<xsl:if test="normalize-space(cac:Contact/cbc:ElectronicMail)">
+						<xsl:if
+							test="normalize-space(cac:Contact/cbc:ElectronicMail)">
 							<Email>
-								<xsl:value-of select="normalize-space(cac:Contact/cbc:ElectronicMail)" />
+								<xsl:value-of
+									select="normalize-space(cac:Contact/cbc:ElectronicMail)" />
 							</Email>
 						</xsl:if>
 					</Empresa>
@@ -116,7 +125,7 @@
 
 			<Facturas>
 
-				<FacturaGeneral CIFEmisor="{$sellerCIF}"
+				<FacturaGeneral Plantilla="70" CIFEmisor="{$sellerCIF}"
 					IdTipoFactura="FacturaComercial" IdTipoMoneda="EUR"
 					ImporteTotal="{$taxInclusiveTotalAmount}" Nfactura="{$invoiceId}"
 					CIFReceptor="{$buyerCIF}">
@@ -127,10 +136,26 @@
 							select="normalize-space(/inv:Invoice/cbc:IssueDate)" />
 
 						<Fecha formato="yyyy-MM-dd">
-							<xsl:value-of select="$invoiceDate" />
+							<xsl:value-of
+								select="date:format-date($invoiceDate,'yyyy-MM-dd')" />
 						</Fecha>
 
 					</Cabecera>
+
+					<xsl:variable name="gln"
+						select="normalize-space(/inv:Invoice/cac:BuyerParty/cac:Party/cac:PartyIdentification/cac:ID[@identificationSchemeName='EAN'])" />
+
+					<IdentificacionEnvio>
+						<GLN>
+							<xsl:value-of select="$gln" />
+						</GLN>
+					</IdentificacionEnvio>
+
+					<IdentificacionReceptor>
+						<GLN>
+							<xsl:value-of select="$gln" />
+						</GLN>
+					</IdentificacionReceptor>
 
 					<Impuestos>
 
@@ -165,6 +190,21 @@
 
 					</Impuestos>
 
+					<Vencimientos>
+
+						<Vencimiento>
+							<FormaPago>
+								<xsl:value-of
+									select="payment:parseMean(/inv:Invoice/cac:PaymentMeans/cac:Payment/cac:ID)" />
+							</FormaPago>
+							<FechaVencimiento formato="yyyy-MM-dd">
+								<xsl:value-of
+									select="date:format-date(/inv:Invoice/cac:PaymentTerms/cac:SettlementPeriod/cbc:EndDateTime,'yyyy-MM-dd')" />
+							</FechaVencimiento>
+						</Vencimiento>
+
+					</Vencimientos>
+
 					<Extensiones>
 
 						<Extension nombre="TipoOperacion">
@@ -182,6 +222,25 @@
 						</ImporteBruto>
 
 					</TotalesFactura>
+
+					<xsl:variable name="documentReference"
+						select="normalize-space(/inv:Invoice/inv:DespatchDocumentReference/cac:ID)" />
+
+					<xsl:if test="$documentReference">
+
+						<Albaranes>
+							<Albaran id="{$documentReference}">
+
+								<EntradaAlbaran nombre="id">
+									<xsl:value-of
+										disable-output-escaping="yes"
+										select="concat($cdata-o,$documentReference,$cdata-c)" />
+								</EntradaAlbaran>
+
+							</Albaran>
+						</Albaranes>
+
+					</xsl:if>
 
 					<Conceptos>
 

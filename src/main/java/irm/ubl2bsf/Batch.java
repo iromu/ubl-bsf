@@ -15,52 +15,61 @@
 package irm.ubl2bsf;
 
 import java.io.File;
+import java.util.Date;
+
+import org.apache.log4j.Logger;
 
 /**
  * @author wantez
  * 
  */
 public class Batch {
-
+	private static final String BAD_PARAMETERS = "BAD PARAMETERS";
 	private static final String ADAPTER_XSL = "ubl2bsf-adapter.xsl";
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		try {
-			if (args == null || args.length == 0) {
-				System.err.println("BAD PARAMETERS");
-				System.exit(-1);
-			}
-			String importdir;
-			String exportdir;
-			importdir = args[1];
-			exportdir = args[3];
-			final Batch batch = new Batch();
-			batch.run(ADAPTER_XSL, importdir, exportdir);
-		} catch (RuntimeException e) {
-			e.printStackTrace();
+	public static void main(final String[] args) {
+		if ((args == null) || (args.length != 4)) {
+			System.err.println(Batch.BAD_PARAMETERS);
+			System.exit(-1);
 		}
+		String importdir;
+		String exportdir;
+		importdir = args[1];
+		exportdir = args[3];
+		final Batch batch = new Batch();
+		batch.run(Batch.ADAPTER_XSL, importdir, exportdir);
 	}
 
-	public void run(String style, String input, String output) {
+	private final Logger log = Logger.getLogger(this.getClass());
+
+	public void run(final String style, final String input, final String output) {
 		final Parser parser = new Parser(style);
 		final File in = new File(input);
 		final File out = new File(output);
 		final boolean isInDir = in.isDirectory();
 		final boolean isOutDir = out.isDirectory();
+		final long start = System.currentTimeMillis();
+		this.log.info("Started at " + new Date());
 		if (isInDir && isOutDir) {
 			final String[] children = in.list();
-			for (int i = 0; i < children.length; i++) {
-				parser.parse(new File(in, children[i]).getAbsolutePath(),
-						new File(out, children[i]).getAbsolutePath());
+			for (final String element : children) {
+				final File file = new File(in, element);
+				if (file.isFile()) {
+					final String outPath = new File(out, element)
+							.getAbsolutePath();
+					final String inPath = file.getAbsolutePath();
+					parser.parse(inPath, outPath);
+				}
 			}
 		} else if (!isInDir && !isOutDir) {
 			parser.parse(input, output);
 		} else {
-			System.err.println("BAD PARAMETERS");
+			System.err.println(Batch.BAD_PARAMETERS);
+			this.log.error(Batch.BAD_PARAMETERS);
+			System.exit(-1);
 		}
+		this.log.info("Terminated in " + (System.currentTimeMillis() - start)
+				+ " ms");
 	}
 
 }

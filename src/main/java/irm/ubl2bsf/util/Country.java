@@ -19,25 +19,29 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 public class Country {
+	private static final String FAILED_TO_DECODE_COUNTRY = "FAILED_TO_DECODE_COUNTRY";
+
 	private static final Logger log = Logger.getLogger(Country.class);
 
 	public static final Map<String, String> decode = new Hashtable<String, String>();
-	
+
 	static {
-		decode.put("España".toUpperCase(), "ESP");
-		decode.put("Alemania".toUpperCase(), "DEU");
-		decode.put("Portugal".toUpperCase(), "PRT");
-		decode.put("Reino Unido".toUpperCase(), "GBR");
-		decode.put("Estados Unidos".toUpperCase(), "USA");
-		decode.put("Francia, Metropolitana".toUpperCase(), "FXX");
-		decode.put("Francia".toUpperCase(), "FXX");
-		log.debug(decode);
+		Country.decode.put("España".toUpperCase(), "ESP");
+		Country.decode.put("Alemania".toUpperCase(), "DEU");
+		Country.decode.put("Portugal".toUpperCase(), "PRT");
+		Country.decode.put("Reino Unido".toUpperCase(), "GBR");
+		Country.decode.put("Estados Unidos".toUpperCase(), "USA");
+		Country.decode.put("Francia, Metropolitana".toUpperCase(), "FXX");
+		Country.decode.put("Francia".toUpperCase(), "FXX");
+		Country.log.debug(Country.decode);
 	}
 
 	public static String parse(final String origin) {
 		final String key = origin.toUpperCase();
-		if (Country.decode.containsKey(key))
-			return decode.get(key);
-		return "FAILED_TO_DECODE_COUNTRY";
+		if (Country.decode.containsKey(key)) {
+			return Country.decode.get(key);
+		}
+		Country.log.error(Country.FAILED_TO_DECODE_COUNTRY + ": " + origin);
+		return Country.FAILED_TO_DECODE_COUNTRY;
 	}
 }
