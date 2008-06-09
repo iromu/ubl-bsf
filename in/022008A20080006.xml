@@ -1,11 +1,11 @@
 <?xml version="1.0"  encoding="ISO-8859-1"?>
  <Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-1.0" xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnspecializedDatatypes-1.0"  xmlns:sdt="urn:oasis:names:specification:ubl:schema:xsd:SpecializedDatatypes-1.0"  xmlns:cur="urn:oasis:names:specification:ubl:schema:xsd:CurrencyCode-1.0"  xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-1.0"  xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-1.0"  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-1.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-1.0  http://docs.oasis-open.org/ubl/cd-UBL-1.0/xsd/maindoc/UBL-Invoice-1.0.xsd">
-  <ID>A 20080007</ID>
-  <GUID>2008052016053902-02B64814890000002-FAA20080007</GUID>
-  <cbc:IssueDate>2008-05-12</cbc:IssueDate>
+  <ID>A 20080006</ID>
+  <GUID>2008052016052902-02B64814890000002-FAA20080006</GUID>
+  <cbc:IssueDate>2008-05-09</cbc:IssueDate>
   <InvoiceTypeCode>380</InvoiceTypeCode>
-  <cbc:Note>COMENTARIO DOCUMENTO:  [8432897001877]Ref. Tienda Divers</cbc:Note>
-  <TaxPointDate>2008-05-12</TaxPointDate>
+  <cbc:Note>COMENTARIO DOCUMENTO: Ref. [8432897001877] Tienda Divers 1</cbc:Note>
+  <TaxPointDate>2008-05-09</TaxPointDate>
   <InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
   <cac:BuyerParty>
    <cac:SellerAssignedAccountID>000002</cac:SellerAssignedAccountID>
@@ -75,16 +75,16 @@
   </cac:PaymentMeans>
   <cac:PaymentTerms>
    <cac:ID>1</cac:ID>
-   <cbc:Note>5075.23</cbc:Note>
+   <cbc:Note>4366.70</cbc:Note>
    <cac:SettlementPeriod>
     <cbc:EndDateTime>2008-09-05T00:00:00</cbc:EndDateTime>
    </cac:SettlementPeriod>
   </cac:PaymentTerms>
   <cac:TaxTotal>
-   <cbc:TotalTaxAmount amountCurrencyID = "EUR" >700.03</cbc:TotalTaxAmount>
+   <cbc:TotalTaxAmount amountCurrencyID = "EUR" >602.30</cbc:TotalTaxAmount>
    <cac:TaxSubTotal>
-    <cbc:TaxableAmount amountCurrencyID = "EUR" >4375.20</cbc:TaxableAmount>
-    <cbc:TaxAmount amountCurrencyID = "EUR" >700.03</cbc:TaxAmount>
+    <cbc:TaxableAmount amountCurrencyID = "EUR" >3764.40</cbc:TaxableAmount>
+    <cbc:TaxAmount amountCurrencyID = "EUR" >602.30</cbc:TaxAmount>
     <cac:TaxCategory>
      <cac:ID>VAT</cac:ID>
      <cbc:Percent>16.0</cbc:Percent>
@@ -95,9 +95,9 @@
    </cac:TaxSubTotal>
   </cac:TaxTotal>
   <cac:LegalTotal>
-   <cbc:LineExtensionTotalAmount amountCurrencyID = "EUR" >4375.20</cbc:LineExtensionTotalAmount>
-   <cbc:TaxExclusiveTotalAmount amountCurrencyID = "EUR" >4375.20</cbc:TaxExclusiveTotalAmount>
-   <cbc:TaxInclusiveTotalAmount amountCurrencyID = "EUR" >5075.23</cbc:TaxInclusiveTotalAmount>
+   <cbc:LineExtensionTotalAmount amountCurrencyID = "EUR" >3764.40</cbc:LineExtensionTotalAmount>
+   <cbc:TaxExclusiveTotalAmount amountCurrencyID = "EUR" >3764.40</cbc:TaxExclusiveTotalAmount>
+   <cbc:TaxInclusiveTotalAmount amountCurrencyID = "EUR" >4366.70</cbc:TaxInclusiveTotalAmount>
   </cac:LegalTotal>
   <cac:InvoiceLine>
    <cac:ID>1</cac:ID>
@@ -138,8 +138,8 @@
   </cac:InvoiceLine>
   <cac:InvoiceLine>
    <cac:ID>2</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >126.00</cbc:LineExtensionAmount>
+   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >24</cbc:InvoicedQuantity>
+   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >252.00</cbc:LineExtensionAmount>
    <cac:Item>
     <cbc:Description>BCN-Camiseta Mujer Blanca M (2007)</cbc:Description>
     <cac:SellersItemIdentification>
@@ -249,8 +249,8 @@
   </cac:InvoiceLine>
   <cac:InvoiceLine>
    <cac:ID>5</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >126.00</cbc:LineExtensionAmount>
+   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >24</cbc:InvoicedQuantity>
+   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >252.00</cbc:LineExtensionAmount>
    <cac:Item>
     <cbc:Description>BCN-Camiseta Mujer Negra M</cbc:Description>
     <cac:SellersItemIdentification>
@@ -360,8 +360,8 @@
   </cac:InvoiceLine>
   <cac:InvoiceLine>
    <cac:ID>8</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >126.00</cbc:LineExtensionAmount>
+   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >24</cbc:InvoicedQuantity>
+   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >252.00</cbc:LineExtensionAmount>
    <cac:Item>
     <cbc:Description>BCN-Camiseta Mujer Roja M</cbc:Description>
     <cac:SellersItemIdentification>
@@ -471,8 +471,8 @@
   </cac:InvoiceLine>
   <cac:InvoiceLine>
    <cac:ID>11</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >126.00</cbc:LineExtensionAmount>
+   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >24</cbc:InvoicedQuantity>
+   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >252.00</cbc:LineExtensionAmount>
    <cac:Item>
     <cbc:Description>BCN-Camiseta Mujer Verde M</cbc:Description>
     <cac:SellersItemIdentification>
@@ -582,8 +582,8 @@
   </cac:InvoiceLine>
   <cac:InvoiceLine>
    <cac:ID>14</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >126.00</cbc:LineExtensionAmount>
+   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >24</cbc:InvoicedQuantity>
+   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >252.00</cbc:LineExtensionAmount>
    <cac:Item>
     <cbc:Description>BCN-Camiseta Mujer Azul M</cbc:Description>
     <cac:SellersItemIdentification>
@@ -693,8 +693,8 @@
   </cac:InvoiceLine>
   <cac:InvoiceLine>
    <cac:ID>17</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >126.00</cbc:LineExtensionAmount>
+   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >24</cbc:InvoicedQuantity>
+   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >252.00</cbc:LineExtensionAmount>
    <cac:Item>
     <cbc:Description>BCN-Camiseta Mujer Gris M (2007)</cbc:Description>
     <cac:SellersItemIdentification>
@@ -730,25 +730,20 @@
   </cac:InvoiceLine>
   <cac:InvoiceLine>
    <cac:ID>18</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >126.00</cbc:LineExtensionAmount>
+   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >48</cbc:InvoicedQuantity>
+   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >321.60</cbc:LineExtensionAmount>
    <cac:Item>
-    <cbc:Description>BCN-Camiseta Mujer Gris L (2007)</cbc:Description>
+    <cbc:Description>BCN-Bolsa plegable-reversible Gris-Verde</cbc:Description>
     <cac:SellersItemIdentification>
-     <cac:ID>8437008524184</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Talla</cac:AttributeID>
-      <cac:DescriptionCode>L</cac:DescriptionCode>
-      <cbc:Description>Large</cbc:Description>
-     </cac:PhysicalAttribute>
+     <cac:ID>8437008524283</cac:ID>
      <cac:PhysicalAttribute>
       <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>6</cac:DescriptionCode>
-      <cbc:Description>Gris</cbc:Description>
+      <cac:DescriptionCode>1</cac:DescriptionCode>
+      <cbc:Description>Gris-Verde</cbc:Description>
      </cac:PhysicalAttribute>
     </cac:SellersItemIdentification>
     <cac:StandardItemIdentification>
-     <cac:ID>8437008524184</cac:ID>
+     <cac:ID>8437008524283</cac:ID>
     </cac:StandardItemIdentification>
     <cac:TaxCategory>
      <cac:ID>VAT</cac:ID>
@@ -758,34 +753,29 @@
      </cac:TaxScheme>
     </cac:TaxCategory>
     <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >10.50</cbc:PriceAmount>
+     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.70</cbc:PriceAmount>
     </cac:BasePrice>
    </cac:Item>
    <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >10.50</cbc:PriceAmount>
+    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.70</cbc:PriceAmount>
    </cac:BasePrice>
   </cac:InvoiceLine>
   <cac:InvoiceLine>
    <cac:ID>19</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >132.00</cbc:LineExtensionAmount>
+   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >48</cbc:InvoicedQuantity>
+   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >321.60</cbc:LineExtensionAmount>
    <cac:Item>
-    <cbc:Description>BCN-Camiseta Unisex Gris L (2007)</cbc:Description>
+    <cbc:Description>BCN-Bolsa plegable-reversible Roja-Rosa</cbc:Description>
     <cac:SellersItemIdentification>
-     <cac:ID>8437008524191</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Talla</cac:AttributeID>
-      <cac:DescriptionCode>L</cac:DescriptionCode>
-      <cbc:Description>Large</cbc:Description>
-     </cac:PhysicalAttribute>
+     <cac:ID>8437008524290</cac:ID>
      <cac:PhysicalAttribute>
       <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>6</cac:DescriptionCode>
-      <cbc:Description>Gris</cbc:Description>
+      <cac:DescriptionCode>2</cac:DescriptionCode>
+      <cbc:Description>Roja-Rosa</cbc:Description>
      </cac:PhysicalAttribute>
     </cac:SellersItemIdentification>
     <cac:StandardItemIdentification>
-     <cac:ID>8437008524191</cac:ID>
+     <cac:ID>8437008524290</cac:ID>
     </cac:StandardItemIdentification>
     <cac:TaxCategory>
      <cac:ID>VAT</cac:ID>
@@ -795,200 +785,15 @@
      </cac:TaxScheme>
     </cac:TaxCategory>
     <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >11.00</cbc:PriceAmount>
+     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.70</cbc:PriceAmount>
     </cac:BasePrice>
    </cac:Item>
    <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >11.00</cbc:PriceAmount>
+    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.70</cbc:PriceAmount>
    </cac:BasePrice>
   </cac:InvoiceLine>
   <cac:InvoiceLine>
    <cac:ID>20</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >132.00</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Camiseta Unisex Gris XL (2007)</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524207</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Talla</cac:AttributeID>
-      <cac:DescriptionCode>XL</cac:DescriptionCode>
-      <cbc:Description>Extra Large</cbc:Description>
-     </cac:PhysicalAttribute>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>6</cac:DescriptionCode>
-      <cbc:Description>Gris</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524207</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >11.00</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >11.00</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>21</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >132.00</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Camiseta Unisex Roja L (2007)</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524214</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Talla</cac:AttributeID>
-      <cac:DescriptionCode>L</cac:DescriptionCode>
-      <cbc:Description>Large</cbc:Description>
-     </cac:PhysicalAttribute>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>4</cac:DescriptionCode>
-      <cbc:Description>Roja</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524214</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >11.00</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >11.00</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>22</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >132.00</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Camiseta Unisex Roja XL (2007)</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524221</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Talla</cac:AttributeID>
-      <cac:DescriptionCode>XL</cac:DescriptionCode>
-      <cbc:Description>Extra Large</cbc:Description>
-     </cac:PhysicalAttribute>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>4</cac:DescriptionCode>
-      <cbc:Description>Roja</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524221</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >11.00</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >11.00</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>23</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >74.40</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Camiseta Niño Blanca-Negra S</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524610</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Talla</cac:AttributeID>
-      <cac:DescriptionCode>S</cac:DescriptionCode>
-      <cbc:Description>Pequeña</cbc:Description>
-     </cac:PhysicalAttribute>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>5</cac:DescriptionCode>
-      <cbc:Description>Negra</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524610</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.20</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.20</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>24</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >74.40</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Camiseta Niño Blanca-Azul S</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524627</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Talla</cac:AttributeID>
-      <cac:DescriptionCode>S</cac:DescriptionCode>
-      <cbc:Description>Pequeña</cbc:Description>
-     </cac:PhysicalAttribute>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>2</cac:DescriptionCode>
-      <cbc:Description>Azul</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524627</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.20</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.20</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>25</cac:ID>
    <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
    <cbc:LineExtensionAmount amountCurrencyID = "EUR" >74.40</cbc:LineExtensionAmount>
    <cac:Item>
@@ -1025,7 +830,44 @@
    </cac:BasePrice>
   </cac:InvoiceLine>
   <cac:InvoiceLine>
-   <cac:ID>26</cac:ID>
+   <cac:ID>21</cac:ID>
+   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
+   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >74.40</cbc:LineExtensionAmount>
+   <cac:Item>
+    <cbc:Description>BCN-Camiseta Niño Blanca-Azul S</cbc:Description>
+    <cac:SellersItemIdentification>
+     <cac:ID>8437008524627</cac:ID>
+     <cac:PhysicalAttribute>
+      <cac:AttributeID>Talla</cac:AttributeID>
+      <cac:DescriptionCode>S</cac:DescriptionCode>
+      <cbc:Description>Pequeña</cbc:Description>
+     </cac:PhysicalAttribute>
+     <cac:PhysicalAttribute>
+      <cac:AttributeID>Color</cac:AttributeID>
+      <cac:DescriptionCode>2</cac:DescriptionCode>
+      <cbc:Description>Azul</cbc:Description>
+     </cac:PhysicalAttribute>
+    </cac:SellersItemIdentification>
+    <cac:StandardItemIdentification>
+     <cac:ID>8437008524627</cac:ID>
+    </cac:StandardItemIdentification>
+    <cac:TaxCategory>
+     <cac:ID>VAT</cac:ID>
+     <cbc:Percent>16.0</cbc:Percent>
+     <cac:TaxScheme>
+      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
+     </cac:TaxScheme>
+    </cac:TaxCategory>
+    <cac:BasePrice>
+     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.20</cbc:PriceAmount>
+    </cac:BasePrice>
+   </cac:Item>
+   <cac:BasePrice>
+    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.20</cbc:PriceAmount>
+   </cac:BasePrice>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+   <cac:ID>22</cac:ID>
    <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
    <cbc:LineExtensionAmount amountCurrencyID = "EUR" >74.40</cbc:LineExtensionAmount>
    <cac:Item>
@@ -1059,370 +901,6 @@
    </cac:Item>
    <cac:BasePrice>
     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.20</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>27</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >48</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >321.60</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Bolsa plegable-reversible Gris-Verde</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524283</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>1</cac:DescriptionCode>
-      <cbc:Description>Gris-Verde</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524283</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.70</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.70</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>28</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >48</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >321.60</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Bolsa plegable-reversible Roja-Rosa</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524290</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>2</cac:DescriptionCode>
-      <cbc:Description>Roja-Rosa</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524290</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.70</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >6.70</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>29</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >24</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >134.40</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Cojin plegable Gris-Verde</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524313</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>1</cac:DescriptionCode>
-      <cbc:Description>Gris-Verde</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524313</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >5.60</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >5.60</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>30</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >24</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >134.40</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Cojin plegable Rojo-Rosa</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524320</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>Color</cac:AttributeID>
-      <cac:DescriptionCode>2</cac:DescriptionCode>
-      <cbc:Description>Roja-Rosa</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524320</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >5.60</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >5.60</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>31</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >48</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >48.00</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Set 4 lápices negros</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524344</cac:ID>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524344</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >1.00</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >1.00</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>32</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >40</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >120.00</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Cuaderno con goma elástica Negro</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524368</cac:ID>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524368</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >3.00</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >3.00</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>33</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >48</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >67.20</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Identificador de maleta</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524597</cac:ID>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524597</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >1.40</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >1.40</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>34</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >33.60</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Taza porcelana Blanca-Verde</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524641</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>color</cac:AttributeID>
-      <cac:DescriptionCode>1</cac:DescriptionCode>
-      <cbc:Description>Blanco-Verde</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524641</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >2.80</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >2.80</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>35</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >33.60</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Taza porcelana Blanca-Azul</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524658</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>color</cac:AttributeID>
-      <cac:DescriptionCode>2</cac:DescriptionCode>
-      <cbc:Description>Blanco-Azul</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524658</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >2.80</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >2.80</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>36</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >33.60</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Taza porcelana Blanca-Rosa</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524665</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>color</cac:AttributeID>
-      <cac:DescriptionCode>3</cac:DescriptionCode>
-      <cbc:Description>Blanco-Rosa</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524665</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >2.80</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >2.80</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>37</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >12</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >33.60</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>BCN-Taza porcelana Blanca-Roja</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8437008524672</cac:ID>
-     <cac:PhysicalAttribute>
-      <cac:AttributeID>color</cac:AttributeID>
-      <cac:DescriptionCode>4</cac:DescriptionCode>
-      <cbc:Description>Blanco-Rojo</cbc:Description>
-     </cac:PhysicalAttribute>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8437008524672</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >2.80</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >2.80</cbc:PriceAmount>
-   </cac:BasePrice>
-  </cac:InvoiceLine>
-  <cac:InvoiceLine>
-   <cac:ID>38</cac:ID>
-   <cbc:InvoicedQuantity quantityUnitCode = "PCE" >1</cbc:InvoicedQuantity>
-   <cbc:LineExtensionAmount amountCurrencyID = "EUR" >0.00</cbc:LineExtensionAmount>
-   <cac:Item>
-    <cbc:Description>Mueble Expositor Girona (GRO)</cbc:Description>
-    <cac:SellersItemIdentification>
-     <cac:ID>8436046350151</cac:ID>
-    </cac:SellersItemIdentification>
-    <cac:StandardItemIdentification>
-     <cac:ID>8436046350151</cac:ID>
-    </cac:StandardItemIdentification>
-    <cac:TaxCategory>
-     <cac:ID>VAT</cac:ID>
-     <cbc:Percent>16.0</cbc:Percent>
-     <cac:TaxScheme>
-      <cac:TaxTypeCode>VAT</cac:TaxTypeCode>
-     </cac:TaxScheme>
-    </cac:TaxCategory>
-    <cac:BasePrice>
-     <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >0.00</cbc:PriceAmount>
-    </cac:BasePrice>
-   </cac:Item>
-   <cac:BasePrice>
-    <cbc:PriceAmount amountCurrencyID = "EUR"  amountCurrencyCodeListVersionID = "0.3" >0.00</cbc:PriceAmount>
    </cac:BasePrice>
   </cac:InvoiceLine>
  </Invoice>

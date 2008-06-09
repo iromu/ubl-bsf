@@ -18,6 +18,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:date="http://exslt.org/dates-and-times"
 	xmlns:payment="xalan://irm.ubl2bsf.util.Payment"
+	xmlns:gln="xalan://irm.ubl2bsf.util.Gln"
 	xmlns:country="xalan://irm.ubl2bsf.util.Country" version="1.0"
 	xmlns:inv="urn:oasis:names:specification:ubl:schema:xsd:Invoice-1.0"
 	xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnspecializedDatatypes-1.0"
@@ -27,7 +28,7 @@
 	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-1.0"
 	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-1.0"
 	exclude-result-prefixes="inv udt sdt cur ccts cbc cac"
-	extension-element-prefixes="date payment country">
+	extension-element-prefixes="date payment country gln">
 
 	<xsl:output method="xml" indent="yes" encoding="ISO-8859-1" />
 
@@ -143,7 +144,7 @@
 					</Cabecera>
 
 					<xsl:variable name="gln"
-						select="normalize-space(/inv:Invoice/cac:BuyerParty/cac:Party/cac:PartyIdentification/cac:ID[@identificationSchemeName='EAN'])" />
+						select="gln:parse(normalize-space(/inv:Invoice/cbc:Note))" />
 
 					<IdentificacionEnvio>
 						<GLN>
