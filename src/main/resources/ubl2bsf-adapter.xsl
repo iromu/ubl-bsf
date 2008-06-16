@@ -280,6 +280,10 @@
 									<xsl:value-of select="$priceAmount" />
 								</PUnitario>
 
+								<PUnitarioNeto>
+									<xsl:value-of select="$priceAmount" />
+								</PUnitarioNeto>
+
 								<TotalNetoLinea>
 									<xsl:value-of select="$priceTotal" />
 								</TotalNetoLinea>
