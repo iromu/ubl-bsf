@@ -55,11 +55,6 @@
 
 	<xsl:template match="/">
 
-		<xsl:value-of disable-output-escaping="yes"
-			select="concat('&lt;!DOCTYPE ', $rootnode, ' [&lt;!ENTITY nbsp ', 
-                            $quote,' ',$quote,' &gt;' , '&lt;!ENTITY euro ', 
-                            $quote,'&amp;#8364;',$quote,' &gt;]&gt;')" />
-
 		<ConjuntoDatosFacturas
 			xsi:noNamespaceSchemaLocation="http://62.97.120.126/gfp/Remesa.xsd"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
