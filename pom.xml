@@ -45,10 +45,10 @@
 	</licenses>
 	<scm>
 		<connection>
-			scm:svn:https://ciberia.ath.cx/svn/freelance/ubl-bsf/trunk
+			scm:svn:https://wantez.com/svn/repo1/freelance/ubl-bsf/trunk
 		</connection>
 		<developerConnection>
-			scm:svn:https://ciberia.ath.cx/svn/freelance/ubl-bsf/trunk
+			scm:svn:https://wantez.com/svn/repo1/freelance/ubl-bsf/trunk
 		</developerConnection>
 	</scm>
 	<build>
