@@ -44,13 +44,10 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>
-			scm:svn:http://scm.wantez.com/svn/repo1/freelance/ubl-bsf/trunk
-		</connection>
-		<developerConnection>
-			scm:svn:https://scm.wantez.com/svn/repo1/freelance/ubl-bsf/trunk
-		</developerConnection>
-	</scm>
+		<connection>scm:git:git@github.com:iromu/ubl-bsf.git</connection>
+		<url>scm:git:git@github.com:iromu/ubl-bsf.git</url>
+		<developerConnection>scm:git:git@github.com:iromu/ubl-bsf.git</developerConnection>
+  	</scm>
 	<build>
 		<plugins>
 			<plugin>
